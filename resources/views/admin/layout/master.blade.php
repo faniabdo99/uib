@@ -108,8 +108,8 @@
 							<span class="nav-text">Services</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./app-profile.html">All Service</a></li>
-                            <li><a href="./post-details.html">Add New</a></li>
+                            <li><a href="{{ route('admin.services.all') }}">All Service</a></li>
+                            <li><a href="{{ route('admin.service.getNew') }}">Add New</a></li>
                         </ul>
                     </li>
                     <li>
