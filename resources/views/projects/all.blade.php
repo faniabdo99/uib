@@ -1,0 +1,63 @@
+@extends('layout.master')
+@section('content')
+    <!-- breadcrumb-area -->
+    <div class="breadcrumb__area breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__content">
+                        <h2 class="title">Our Projects</h2>
+                        <nav class="breadcrumb">
+                            <span property="itemListElement" typeof="ListItem">
+                                <a href="{{ route('home') }}">Home</a>
+                            </span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span property="itemListElement" typeof="ListItem">Our Projects</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb-area-end -->
+
+    <!-- project-area -->
+    <section class="project__area-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="project__menu-nav">
+                        <button class="active" data-filter="*">ALL WORKS</button>
+                        @forelse($Categories as $Category)
+                            <button class="" data-filter=".{{ $Category->id }}">{{ $Category->title }}</button>
+                        @empty
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+            <div class="row gutter-24 project-active-two">
+                @forelse($Projects as $Project)
+                    <div class="col-lg-4 col-md-6 grid-item grid-sizer cat-three {{ $Project->category_id }}">
+                        <div class="project__item-two">
+                            <div class="project__thumb-two">
+                                <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><img src="{{ $Project->imagePath }}" alt="{{ $Project->title }}"></a>
+                                <span class="shape"></span>
+                            </div>
+                            <div class="project__content-two">
+                                <h2 class="title"><a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}">{{ $Project->title }}</a></h2>
+                                <span>{{ $Project->date->format('F Y') }}</span>
+                            </div>
+                            <div class="project__icon-two">
+                                <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><i class="renova-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+            </div>
+        </div>
+    </section>
+    <!-- project-area-end -->
+
+    <x-CTA />
+@endsection
