@@ -58,4 +58,9 @@ class ServiceController extends Controller {
         $Service->update($ServiceData);
         return redirect()->route('admin.services.all');
     }
+
+    public function delete(Service $Service){
+        $Service->delete();
+        return redirect()->route('admin.services.all');
+    }
 }

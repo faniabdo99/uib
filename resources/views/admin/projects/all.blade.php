@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Services ({{ $Services->count() }})</h4>
+                        <h4 class="card-title">Projects ({{ $Projects->count() }})</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -21,16 +21,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($Services as $Service)
+                                    @forelse ($Projects as $Project)
                                         <tr>
-                                            <td>{{ $Service->id }}</td>
-                                            <td>{{ $Service->title }}</td>
-                                            <td>{{ $Service->User->name }}</td>
-                                            <td>{{ $Service->created_at->format('Y-m-d h:i A') }}</td>											
+                                            <td>{{ $Project->id }}</td>
+                                            <td>{{ $Project->title }}</td>
+                                            <td>{{ $Project->User->name }}</td>
+                                            <td>{{ $Project->created_at->format('Y-m-d h:i A') }}</td>											
                                             <td>
                                                 <div class="d-flex">
-                                                    <a href="{{ route('admin.services.getEdit', $Service->id) }}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                                    <a href="{{ route('admin.services.delete', $Service->id) }}" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                    <a href="{{ route('admin.projects.getEdit', $Project->id) }}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                                    <a href="{{ route('admin.projects.delete', $Project->id) }}" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
                                                 </div>												
                                             </td>
                                         </tr>

@@ -11,7 +11,7 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-form">
-                            <form action="{{ route('admin.services.postEdit', $Service->id) }}" enctype="multipart/form-data" method="POST">
+                            <form action="{{ route('admin.service.postEdit', $Service->id) }}" enctype="multipart/form-data" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label class="col-form-label">Title</label>
