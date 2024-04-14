@@ -25,4 +25,15 @@ class ContactRequestController extends Controller
         // Return a success message
         return back()->withSuccess('Your contact request has been recived!');
     }
+
+
+    // Admin
+    public function getAdminAll(){
+        $ContactRequests = ContactRequest::latest()->get();
+        return view('admin.contact-requests.all', compact('ContactRequests'));
+    }
+
+    public function getAdminSingle(ContactRequest $ContactRequest){
+        return view('admin.contact-requests.single', compact('ContactRequest'));
+    }
 }
