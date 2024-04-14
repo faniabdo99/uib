@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\ContactRequest;
+use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 class ContactRequestController extends Controller
@@ -21,7 +21,19 @@ class ContactRequestController extends Controller
         ]);
         // Store the information
         ContactRequest::create($r->all());
+
         // Return a success message
         return back()->withSuccess('Your contact request has been recived!');
+    }
+
+
+    // Admin
+    public function getAdminAll(){
+        $ContactRequests = ContactRequest::latest()->get();
+        return view('admin.contact-requests.all', compact('ContactRequests'));
+    }
+
+    public function getAdminSingle(ContactRequest $ContactRequest){
+        return view('admin.contact-requests.single', compact('ContactRequest'));
     }
 }
