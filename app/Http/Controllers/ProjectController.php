@@ -48,7 +48,8 @@ class ProjectController extends Controller {
     }
 
     public function getAdminEdit(Project $Project){
-        return view('admin.projects.edit', compact('Project'));
+        $AllCategories = Category::latest()->get();
+        return view('admin.projects.edit', compact('Project', 'AllCategories'));
     }
 
     public function postAdminEdit(Request $r, Project $Project){
