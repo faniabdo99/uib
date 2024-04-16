@@ -7,20 +7,20 @@
             <div class="col-xl-12 col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Edit Service: {{ $Service->title }}</h4>
+                        <h4 class="card-title">Edit Project: {{ $Project->title }}</h4>
                     </div>
                     <div class="card-body">
                         <div class="basic-form">
-                            <form action="{{ route('admin.service.postEdit', $Service->id) }}" enctype="multipart/form-data" method="POST">
+                            <form action="{{ route('admin.projects.postEdit', $Project->id) }}" enctype="multipart/form-data" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label class="col-form-label">Title</label>
-                                    <input name="title" type="text" class="form-control" value="{{ $Service->title }}" required >
+                                    <input name="title" type="text" class="form-control" value="{{ $Project->title }}" required >
                                 </div>
-                                <img src="{{ $Service->imagePath }}" style="height: 150px;width: auto;">
+                                <img src="{{ $Project->imagePath }}" style="height: 150px;width: auto;">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">Service Image</span>
+                                        <span class="input-group-text">Project Image</span>
                                     </div>
                                     <div class="custom-file">
                                         <input name="image" type="file" class="custom-file-input">
@@ -28,16 +28,30 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-form-label">Upper Content:</label>
-                                    <textarea name="upper_content" class="editor" cols="30" rows="10">{!! $Service->upper_content !!}</textarea>
+                                    <label class="col-form-label">Category</label>
+                                    <select name="category_id" class="form-control" required>
+                                        <option value="">Choose Category</option>
+                                        @forelse($AllCategories as $Category)
+                                            <option @if($Project->category_id == $Category->id) selected @endif value="{{ $Category->id }}">{{ $Category->title }}</option>
+                                        @empty
+                                        @endforelse
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-form-label">Lower Content:</label>
-                                    <textarea name="lower_content" class="editor" cols="30" rows="10">{!! $Service->lower_content !!}</textarea>
+                                    <label class="col-form-label">Content:</label>
+                                    <textarea name="content" class="editor" cols="30" rows="10">{!! $Project->content !!}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <input type="checkbox" @if($Service->is_featured) checked @endif class="mr-2" name="is_featured">
-                                    <label class="col-form-label">Featured?</label>
+                                    <label class="col-form-label">Clinets</label>
+                                    <input name="clients" type="text" class="form-control" value="{{ $Project->clients }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Date</label>
+                                    <input name="date" type="date" class="form-control" value="{{ $Project->date->format('dd/mm/yyyy') }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Address</label>
+                                    <input name="address" type="text" class="form-control" value="{{ $Project->address }}">
                                 </div>
                                 <button class="btn btn-primary">Submit</button>
                             </form>
