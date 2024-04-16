@@ -45,7 +45,7 @@
                             </div>
                             <div class="project__content-two">
                                 <h2 class="title"><a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}">{{ $Project->title }}</a></h2>
-                                <span>{{ $Project->date->format('F Y') }}</span>
+                                <span>{{ $Project->created_at->format('F Y') }}</span>
                             </div>
                             <div class="project__icon-two">
                                 <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><i class="renova-plus"></i></a>
