@@ -13,6 +13,7 @@
                         <div class="basic-form">
                             <form action="{{ route('admin.projects.postNew') }}" enctype="multipart/form-data" method="POST">
                                 @csrf
+                                <input type="hidden" name="id" value="{{ $nextProjectId }}">
                                 <div class="form-group">
                                     <label class="col-form-label">Title</label>
                                     <input name="title" type="text" class="form-control" required >
@@ -75,13 +76,12 @@
           selector: 'textarea.editor'
         });
         let myDropzone = new Dropzone("div#gallery-upload", { 
-            url: '/file/post',
+            url: "{{ route('admin.projects.uploadGallery' , $nextProjectId) }}",
             method: 'POST',
             paramName: 'file',
             maxFilesize: 10,
             maxFiles: 5,
             acceptedFiles: 'image/*'  
         });
-
     </script>
 @endsection
