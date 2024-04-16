@@ -38,6 +38,10 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
+                                    <label>Project Gallery</label>
+                                    <div id="gallery-upload" class="dropzone"></div>
+                                </div>
+                                <div class="form-group">
                                     <label class="col-form-label">Content:</label>
                                     <textarea name="content" class="editor" cols="30" rows="10">{!! $Project->content !!}</textarea>
                                 </div>
@@ -47,7 +51,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Date</label>
-                                    <input name="date" type="date" class="form-control" value="{{ $Project->date->format('dd/mm/yyyy') }}">
+                                    <input name="date" type="date" class="form-control" value="{{ $Project->date }}">
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Address</label>
@@ -64,10 +68,20 @@
 </div>
 @endsection
 @section('external_scripts')
+    <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tiny.cloud/1/qjf6pr8mycegjxz2i8pb1n9qh36mw3ysf8upxl72jjw6252c/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
           selector: 'textarea.editor'
+        });
+        let myDropzone = new Dropzone("div#gallery-upload", { 
+            url: "{{ route('admin.projects.uploadGallery' , $Project->id) }}",
+            method: 'POST',
+            paramName: 'file',
+            maxFilesize: 10,
+            maxFiles: 5,
+            acceptedFiles: 'image/*'  
         });
     </script>
 @endsection

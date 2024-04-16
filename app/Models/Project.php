@@ -22,6 +22,9 @@ class Project extends Model
     public function Category(){
         return $this->belongsTo(Category::class, 'category_id');
     }
+    public function Gallery(){
+        return $this->hasMany(ProjectImage::class, 'project_id');
+    }
 
     public function getImagePathAttribute() {
         return asset('projects/'. $this->image);
