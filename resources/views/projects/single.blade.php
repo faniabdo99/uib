@@ -84,31 +84,25 @@
                     </div>
                 </div>
             </div>
-            <div class="project__details-img">
-                <div class="row">
-                    <div class="swiper fix blog-thumb-active">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="blog-details.html"><img src="assets/img/blog/blog_img02.jpg" alt="img"></a>
+            @if($Project->Gallery)
+                <div class="project__details-img">
+                    <div class="row">
+                        <div class="swiper fix blog-thumb-active">
+                            <div class="swiper-wrapper">
+                                @foreach($Project->Gallery as $Image)
+                                    <div class="swiper-slide">
+                                        <a href="#"><img src="{{ $Image->imagePath }}" alt="img"></a>
+                                    </div>
+                                @endforeach
                             </div>
-                            <div class="swiper-slide">
-                                <a href="blog-details.html"><img src="assets/img/blog/blog_img03.jpg" alt="img"></a>
+                            <div class="blog__post-thumb-nav">
+                                <button class="blog-button-prev"><i class="renova-right-arrow"></i></button>
+                                <button class="blog-button-next"><i class="renova-right-arrow"></i></button>
                             </div>
-                            <div class="swiper-slide">
-                                <a href="blog-details.html"><img src="assets/img/blog/blog_img02.jpg" alt="img"></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="blog-details.html"><img src="assets/img/blog/blog_img03.jpg" alt="img"></a>
-                            </div>
-                        </div>
-                        <div class="blog__post-thumb-nav">
-                            <button class="blog-button-prev"><i class="renova-right-arrow"></i></button>
-                            <button class="blog-button-next"><i class="renova-right-arrow"></i></button>
                         </div>
                     </div>
-                    
                 </div>
-            </div>
+            @endif
         </div>
     </section>
     <!-- project-details-area-end -->

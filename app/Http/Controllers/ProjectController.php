@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Models\ProjectImage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller {
     public function getAll(){
@@ -25,7 +27,12 @@ class ProjectController extends Controller {
     }
     public function getAdminNew(){
         $AllCategories = Category::latest()->get();
-        return view('admin.projects.new', compact('AllCategories'));
+        if (env('APP_ENV') === 'local') {
+            $nextProjectId = DB::table('sqlite_sequence')->where('name', 'projects')->value('seq') + 1;
+        } else {
+            $nextProjectId = DB::select("SHOW TABLE STATUS LIKE 'projects'")[0]->Auto_increment;
+        }
+        return view('admin.projects.new', compact('AllCategories', 'nextProjectId'));
     }
     public function postAdminNew(Request $r){
         $r->validate([
@@ -48,7 +55,8 @@ class ProjectController extends Controller {
     }
 
     public function getAdminEdit(Project $Project){
-        return view('admin.projects.edit', compact('Project'));
+        $AllCategories = Category::latest()->get();
+        return view('admin.projects.edit', compact('Project', 'AllCategories'));
     }
 
     public function postAdminEdit(Request $r, Project $Project){
@@ -70,5 +78,26 @@ class ProjectController extends Controller {
     public function delete(Project $Project){
         $Project->delete();
         return redirect()->route('admin.projects.all');
+    }
+
+
+    public function uploadGallery(Request $r, $project_id){
+        $r->validate([
+            'file' => 'required|image'
+        ]);
+
+        if ($r->hasFile('file')) {
+            $file = $r->file('file');
+            $filename = $project_id . '_' . time() . '_' . $file->getClientOriginalName();
+            $file->storeAs('public/projects_gallery', $filename);
+            // Create a DB recorod with this information
+            ProjectImage::create([
+                'project_id' => $project_id,
+                'image' => $filename
+            ]);
+            return response()->json(['success' => 'File uploaded successfully', 'filename' => $filename]);
+        } else {
+            return response()->json(['error' => 'No file uploaded'], 400);
+        }
     }
 }
