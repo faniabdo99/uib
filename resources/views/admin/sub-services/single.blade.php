@@ -6,7 +6,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Services ({{ $Services->count() }})</h4>
+                        <h4 class="card-title">{{ $Service->title }} Sub Services ({{ $Service->SubServices->count() }})</h4>
+                        <a class="btn btn-primary" href="{{ route('admin.subServices.getNew', $Service->id) }}">Add New +</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -21,17 +22,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($Services as $Service)
+                                    @forelse ($Service->SubServices as $SubService)
                                         <tr>
-                                            <td>{{ $Service->id }}</td>
-                                            <td>{{ $Service->title }}</td>
-                                            <td>{{ $Service->User->name }}</td>
-                                            <td>{{ $Service->created_at->format('Y-m-d h:i A') }}</td>											
+                                            <td>{{ $SubService->id }}</td>
+                                            <td>{{ $SubService->title }}</td>
+                                            <td>{{ $SubService->User->name }}</td>
+                                            <td>{{ $SubService->created_at->format('Y-m-d h:i A') }}</td>											
                                             <td>
                                                 <div class="d-flex">
-                                                    <a title="Sub Services" href="{{ route('admin.subServices.all', $Service->id) }}" class="btn btn-success shadow btn-xs sharp mr-1"><i class="fa fa-list"></i></a>
-                                                    <a href="{{ route('admin.services.getEdit', $Service->id) }}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                                    <a href="{{ route('admin.services.delete', $Service->id) }}" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                    <a href="{{ route('admin.subServices.getEdit', $SubService->id) }}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                                    <a href="{{ route('admin.subServices.delete', $SubService->id) }}" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
                                                 </div>												
                                             </td>
                                         </tr>
