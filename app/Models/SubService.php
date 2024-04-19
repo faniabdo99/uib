@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class SubService extends Model
 {
     use HasFactory;
     protected $guarded = [];
@@ -13,11 +13,12 @@ class Service extends Model
     public function User(){
         return $this->belongsTo(User::class, 'user_id');
     }
-    public function SubServices(){
-        return $this->hasMany(SubService::class, 'service_id');
+
+    public function Service(){
+        return $this->belongsTo(Service::class, 'service_id');
     }
 
-    public function getImagePathAttribute() {
-        return asset('services/'. $this->image);
+    public function getImagePathAttribute(){
+        return asset('sub-services/'. $this->image);
     }
 }
