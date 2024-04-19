@@ -1,15 +1,15 @@
 <?php
 
-use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\SubServiceController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactRequestController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SubServiceController;
 use App\Http\Middleware\isAdmin;
 use Illuminate\Support\Facades\Route;
 
@@ -27,15 +27,15 @@ Route::get('projects/{Project}/{slug}', [ProjectController::class, 'getSingle'])
 Route::get('login', [AuthController::class, 'getLogin'])->name('login.get');
 Route::post('login', [AuthController::class, 'postLogin'])->name('login.post');
 // Admin Routes
-Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'admin.'], function(){
+Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'admin.'], function (): void {
     Route::get('/', [AdminController::class, 'getHome'])->name('home');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-    Route::prefix('contact-requests')->group(function(){
+    Route::prefix('contact-requests')->group(function (): void {
         Route::get('', [ContactRequestController::class, 'getAdminAll'])->name('contactRequests.all');
         Route::get('/{ContactRequest}', [ContactRequestController::class, 'getAdminSingle'])->name('contactRequests.single');
     });
 
-    Route::prefix('services')->group(function(){
+    Route::prefix('services')->group(function (): void {
         Route::get('all', [ServiceController::class, 'getAdminAll'])->name('services.all');
         Route::get('new', [ServiceController::class, 'getAdminNew'])->name('services.getNew');
         Route::post('new', [ServiceController::class, 'postAdminNew'])->name('services.postNew');
@@ -44,7 +44,7 @@ Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'ad
         Route::get('delete/{Service}', [ServiceController::class, 'delete'])->name('services.delete');
     });
 
-    Route::prefix('sub-services')->group(function(){
+    Route::prefix('sub-services')->group(function (): void {
         Route::get('all/{Service}', [SubServiceController::class, 'getAdminAll'])->name('subServices.all');
         Route::get('new/{Service}', [SubServiceController::class, 'getAdminNew'])->name('subServices.getNew');
         Route::post('new/{Service}', [SubServiceController::class, 'postAdminNew'])->name('subServices.postNew');
@@ -53,7 +53,7 @@ Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'ad
         Route::get('delete/{SubService}', [SubServiceController::class, 'delete'])->name('subServices.delete');
     });
 
-    Route::prefix('categories')->group(function(){
+    Route::prefix('categories')->group(function (): void {
         Route::get('all', [CategoryController::class, 'getAdminAll'])->name('categories.all');
         Route::get('new', [CategoryController::class, 'getAdminNew'])->name('categories.getNew');
         Route::post('new', [CategoryController::class, 'postAdminNew'])->name('categories.postNew');
@@ -62,7 +62,7 @@ Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'ad
         Route::get('delete/{Category}', [CategoryController::class, 'delete'])->name('categories.delete');
     });
 
-    Route::prefix('projects')->group(function(){
+    Route::prefix('projects')->group(function (): void {
         Route::get('all', [ProjectController::class, 'getAdminAll'])->name('projects.all');
         Route::get('new', [ProjectController::class, 'getAdminNew'])->name('projects.getNew');
         Route::post('new', [ProjectController::class, 'postAdminNew'])->name('projects.postNew');
@@ -71,7 +71,7 @@ Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'ad
         Route::get('delete/{Project}', [ProjectController::class, 'delete'])->name('projects.delete');
     });
 
-    Route::prefix('blog')->group(function(){
+    Route::prefix('blog')->group(function (): void {
         Route::get('all', [BlogController::class, 'getAdminAll'])->name('blogs.all');
         Route::get('new', [BlogController::class, 'getAdminNew'])->name('blogs.getNew');
         Route::post('new', [BlogController::class, 'postAdminNew'])->name('blogs.postNew');

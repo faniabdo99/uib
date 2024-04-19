@@ -2,23 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\SubService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class SubServiceController extends Controller {
     // Admin
-    public function getAdminAll(Service $Service){
+    public function getAdminAll(Service $Service) {
         return view('admin.sub-services.single', compact('Service'));
     }
-    public function getAdminNew(Service $Service){
+
+    public function getAdminNew(Service $Service) {
         return view('admin.sub-services.new', compact('Service'));
     }
-    public function postAdminNew(Request $r, Service $Service){
+
+    public function postAdminNew(Request $r, Service $Service) {
         $r->validate([
             'title' => 'required',
-            'image' => 'required'
+            'image' => 'required',
         ]);
         $SubServiceData = $r->except(['_token', 'image']);
         // Generate the slug
@@ -31,14 +33,15 @@ class SubServiceController extends Controller {
             $SubServiceData['image'] = $filename;
         }
         SubService::create($SubServiceData);
+
         return redirect()->route('admin.subServices.all', $Service->id);
     }
 
-    public function getAdminEdit(SubService $SubService){
+    public function getAdminEdit(SubService $SubService) {
         return view('admin.sub-services.edit', compact('SubService'));
     }
 
-    public function postAdminEdit(Request $r, SubService $SubService){
+    public function postAdminEdit(Request $r, SubService $SubService) {
         $r->validate([
             'title' => 'required',
         ]);
@@ -52,11 +55,13 @@ class SubServiceController extends Controller {
             $SubServiceData['image'] = $filename;
         }
         $SubService->update($SubServiceData);
+
         return redirect()->route('admin.subServices.all', $SubService->Service->id);
     }
 
-    public function delete(SubService $SubService){
+    public function delete(SubService $SubService) {
         $SubService->delete();
+
         return redirect()->route('admin.subServices.all', $SubService->Service->id);
     }
 }
