@@ -2,34 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Service;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class ServiceController extends Controller {
-    public function getAll(){
+    public function getAll() {
         $Services = Service::latest()->get();
+
         return view('services.all', compact('Services'));
     }
 
-    public function getSingle(Service $Service){
+    public function getSingle(Service $Service) {
         return view('services.single', compact('Service'));
     }
+
     // Admin
-    public function getAdminAll(){
+    public function getAdminAll() {
         $Services = Service::latest()->get();
+
         return view('admin.services.all', compact('Services'));
     }
-    public function getAdminNew(){
+
+    public function getAdminNew() {
         return view('admin.services.new');
     }
-    public function postAdminNew(Request $r){
+
+    public function postAdminNew(Request $r) {
         $r->validate([
             'title' => 'required',
             'image' => 'required',
-            'description' => 'required|max:255'
+            'description' => 'required|max:255',
         ]);
-        
+
         $ServiceData = $r->except(['_token', 'image', 'is_featured']);
         // Generate the slug
         $ServiceData['user_id'] = auth()->user()->id;
@@ -42,17 +47,18 @@ class ServiceController extends Controller {
             $ServiceData['image'] = $filename;
         }
         Service::create($ServiceData);
+
         return redirect()->route('admin.services.all');
     }
 
-    public function getAdminEdit(Service $Service){
+    public function getAdminEdit(Service $Service) {
         return view('admin.services.edit', compact('Service'));
     }
 
-    public function postAdminEdit(Request $r, Service $Service){
+    public function postAdminEdit(Request $r, Service $Service) {
         $r->validate([
             'title' => 'required',
-            'description' => 'required|max:255'
+            'description' => 'required|max:255',
         ]);
 
         $ServiceData = $r->except(['_token', 'image', 'is_featured']);
@@ -66,11 +72,13 @@ class ServiceController extends Controller {
             $ServiceData['image'] = $filename;
         }
         $Service->update($ServiceData);
+
         return redirect()->route('admin.services.all');
     }
 
-    public function delete(Service $Service){
+    public function delete(Service $Service) {
         $Service->delete();
+
         return redirect()->route('admin.services.all');
     }
 }
