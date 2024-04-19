@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CategoryController;
@@ -16,6 +17,8 @@ Route::get('/', [HomeController::class, 'getHome'])->name('home');
 Route::get('about', [PageController::class, 'getAbout'])->name('about');
 Route::get('contact', [PageController::class, 'getContact'])->name('contact');
 Route::post('/store/contact-request', [ContactRequestController::class, 'store'])->name('contactRequest.store');
+Route::get('blog', [BlogController::class, 'getAll'])->name('blog');
+Route::get('blog/{Blog}/{slug}', [BlogController::class, 'getSingle'])->name('blog.single');
 Route::get('projects', [ProjectController::class, 'getAll'])->name('projects');
 Route::get('projects/{Project}/{slug}', [ProjectController::class, 'getSingle'])->name('projects.single');
 // Login
@@ -55,6 +58,15 @@ Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'ad
         Route::get('edit/{Project}', [ProjectController::class, 'getAdminEdit'])->name('projects.getEdit');
         Route::post('edit/{Project}', [ProjectController::class, 'postAdminEdit'])->name('projects.postEdit');
         Route::get('delete/{Project}', [ProjectController::class, 'delete'])->name('projects.delete');
+    });
+
+    Route::prefix('blog')->group(function(){
+        Route::get('all', [BlogController::class, 'getAdminAll'])->name('blogs.all');
+        Route::get('new', [BlogController::class, 'getAdminNew'])->name('blogs.getNew');
+        Route::post('new', [BlogController::class, 'postAdminNew'])->name('blogs.postNew');
+        Route::get('edit/{Blog}', [BlogController::class, 'getAdminEdit'])->name('blogs.getEdit');
+        Route::post('edit/{Blog}', [BlogController::class, 'postAdminEdit'])->name('blogs.postEdit');
+        Route::get('delete/{Blog}', [BlogController::class, 'delete'])->name('blogs.delete');
     });
 
 });
