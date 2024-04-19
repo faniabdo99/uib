@@ -21,6 +21,15 @@
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/tg-cursor.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT6JSE6ELT"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LT6JSE6ELT');
+    </script>
 </head>
 <body>
     <!--Preloader-->
@@ -45,8 +54,8 @@
                     <div class="col-lg-6">
                         <div class="tg-header__top-menu">
                             <ul class="list-wrap">
-                                <li><a href="contact.html">info@uibswiss.ch</a></li>
-                                <li><a href="contact.html">+1 234 56789</a></li>
+                                <li><a href="{{ route('contact') }}">info@uibswiss.ch</a></li>
+                                <li><a href="{{ route('contact') }}">+1 234 56789</a></li>
                             </ul>
                         </div>
                     </div>
@@ -76,16 +85,16 @@
                                     </a>
                                 </div>
                                 <div class="logo">
-                                    <a href="index.html"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
+                                    <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
                                 </div>
                                 <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                     <ul class="navigation">
-                                        <li class="active"><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="project.html">Projects</a></li>
-                                        <li><a href="blog.html">News</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li @if(request()->route()->getName() == 'home') class="active" @endif><a href="{{ route('home') }}">Home</a></li>
+                                        <li @if(request()->route()->getName() == 'about') class="active" @endif><a href="{{ route('about') }}">About Us</a></li>
+                                        <li @if(request()->route()->getName() == 'services') class="active" @endif><a href="{{ route('services') }}">Services</a></li>
+                                        <li @if(request()->route()->getName() == 'projects') class="active" @endif><a href="{{ route('projects') }}">Projects</a></li>
+                                        <li @if(request()->route()->getName() == 'blog') class="active" @endif><a href="{{ route('blog') }}">News</a></li>
+                                        <li @if(request()->route()->getName() == 'contact') class="active" @endif><a href="{{ route('contact') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
                                 <div class=" tgmenu__navbar-wrap tgmenu__main-menu">
@@ -97,7 +106,7 @@
                                             </ul>
                                         </li>
                                         <li class="header-btn get-in-touch">
-                                            <a href="contact.html" class="btn border-btn">Get In Touch</a>
+                                            <a href="{{ route('contact') }}" class="btn border-btn">Get In Touch</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -114,12 +123,6 @@
                 <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
                 <div class="nav-logo">
                     <a href="index.html"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
-                </div>
-                <div class="tgmobile__search">
-                    <form action="#">
-                        <input type="text" placeholder="Search here...">
-                        <button><i class="fas fa-search"></i></button>
-                    </form>
                 </div>
                 <div class="tgmobile__menu-outer">
                     <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -257,55 +260,35 @@
                             <div class="footer__widget-link">
                                 <ul class="list-wrap">
                                     <li>
-                                        <a href="about.html"><i class="renova-right-arrow"></i><span>About</span></a>
+                                        <a href="{{ route('about') }}"><i class="renova-right-arrow"></i><span>About</span></a>
                                     </li>
                                     <li>
-                                        <a href="contact.html"><i class="renova-right-arrow"></i><span>Services</span></a>
+                                        <a href="{{ route('services') }}"><i class="renova-right-arrow"></i><span>Services</span></a>
                                     </li>
                                     <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Projects</span></a>
+                                        <a href="{{ route('projects') }}"><i class="renova-right-arrow"></i><span>Projects</span></a>
                                     </li>
                                     <li>
-                                        <a href="team.html"><i class="renova-right-arrow"></i><span>News</span></a>
+                                        <a href="{{ route('blog') }}"><i class="renova-right-arrow"></i><span>News</span></a>
                                     </li>
                                     <li>
-                                        <a href="contact.html"><i class="renova-right-arrow"></i><span>Contact Us</span></a>
+                                        <a href="{{ route('contact') }}"><i class="renova-right-arrow"></i><span>Contact Us</span></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-4 col-md-3 col-sm-6">
+                    <div class="col-xl-4 col-lg-8 col-md-6 col-sm-12">
                         <div class="footer__widget">
                             <h4 class="footer__widget-title">Services</h4>
                             <div class="footer__widget-link">
                                 <ul class="list-wrap">
-                                    <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Business Consulting</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Demining Consulting</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Security Consulting</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Energy & Oil Consulting</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
-                        <div class="footer__widget">
-                            <div class="footer__widget-link">
-                                <ul class="list-wrap">
-                                    <li>
-                                        <a href="about.html"><i class="renova-right-arrow"></i><span>Travel & Aviation Consulting </span></a>
-                                    </li>
-                                    <li>
-                                        <a href="appointment.html"><i class="renova-right-arrow"></i><span>Transport & Logistics Consulting</span></a>
-                                    </li>
+                                    @forelse(getFeaturedServices(6) as $FeaturedService)
+                                        <li>
+                                            <a href="{{ route('services.single', [$FeaturedService->id, $FeaturedService->slug]) }}"><i class="renova-right-arrow"></i><span>{{ $FeaturedService->title }}</span></a>
+                                        </li>
+                                    @empty
+                                    @endforelse
                                 </ul>
                             </div>
                         </div>
