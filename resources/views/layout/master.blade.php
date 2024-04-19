@@ -84,7 +84,7 @@
                                         <li><a href="{{ route('about') }}">About Us</a></li>
                                         <li><a href="services.html">Services</a></li>
                                         <li><a href="{{ route('projects') }}">Projects</a></li>
-                                        <li><a href="blog.html">News</a></li>
+                                        <li><a href="{{ route('blog') }}">News</a></li>
                                         <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
