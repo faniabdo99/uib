@@ -1,0 +1,136 @@
+@extends('layout.master')
+@section('content')
+    
+        <!-- breadcrumb-area -->
+        <div class="breadcrumb__area breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb__content">
+                            <h2 class="title">About Us</h2>
+                            <nav class="breadcrumb">
+                                <span property="itemListElement" typeof="ListItem">
+                                    <a href="{{ route('home') }}">Home</a>
+                                </span>
+                                <span class="breadcrumb-separator">/</span>
+                                <span property="itemListElement" typeof="ListItem">About Us</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb-area-end -->
+        <!-- services-area -->
+        <section class="services__area-three section-py-120">
+            <div class="container">
+                <div class="row gutter-24 justify-content-center">
+                    <div class="col-xl-7 col-lg-6 col-md-8">
+                        <div class="services__thumb-three">
+                            <img src="assets/img/about/about_01.jpg" alt="img" class="wow img-custom-anim-left animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="section__title section__title-three mb-25">
+                            <span class="sub-title">More About Us</span>
+                            <h2 class="title">About Us</h2>
+                        </div>
+                        <div class="services__content-three">
+                            <h2 class="title">We are guided by a set of core values that prioritize integrity, transparency, and a client-first approach</h2>
+                            <p>United International Business GmbH is a family-owned company located in Thurgau canton, Switzerland, founded in 2016. Our primary focus is on facilitating international business transactions between China, the Middle East, and the EU. With a commitment to providing essential services for your company's success in the global market, we specialize in advising and supporting leading global companies across various industries.
+                            </p>
+
+                            <p>United International Business GmbH is proud to be the only Swiss company providing such services in Iraq, showcasing our dedication to expanding our reach and offering unparalleled expertise in the region.
+                            </p>
+                        
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- services-area-end -->
+       <!-- about-area -->
+       <section class="about__area-two section-pt-120">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="about__img-wrap-two">
+                            <img src="assets/img/about/wissam-photo.jpg" alt="img" class="wow img-custom-anim-right animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                            <img src="assets/img/logo/preloader.svg" alt="img" class="wow img-custom-anim-top animated" data-wow-duration="1.5s" data-wow-delay="0.6s">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about__content-two">
+                            
+                           
+                            <h2 class="title sub-title title-ceo">CEO Message</h2>
+
+                            <p class="fst-italic">As the CEO of United International Business GmbH, I am honored to lead a team that is dedicated to excellence, innovation, and unwavering commitment to our clients' success. Our journey in the global business landscape has been defined by our relentless pursuit of growth, our passion for overcoming challenges, and our relentless focus on building lasting partnerships.
+                                </p>
+                                <p>At United International Business GmbH, we believe in the power of collaboration, the strength of diversity, and the importance of integrity in all that we do. Our team is driven by a shared vision of creating a positive impact on the world through our work, and we are committed to pushing boundaries, embracing change, and always striving for the highest standards of quality and service.
+                                </p>
+                                <p>I am proud of the work we have accomplished so far especially in Iraq and excited about the opportunities that lie ahead. Together, we will continue to push the boundaries of what is possible, inspire each other to reach new heights, and make a meaningful difference in the lives of our clients, partners, and communities.
+                                </p>
+                                <p>Thank you for being a part of our journey. Your trust and support mean the world to us, and we look forward to continuing to serve you with dedication, passion, and a relentless drive for success.
+                                <br>Warm regards,
+                                </p>
+                            <h5 class="name-ceo">wissam alamy</h5>
+                            <p class="fw-bolder fs-6 ceo-position">CEO, United International Business GmbH</p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+       <!-- about-area-end -->
+
+       <!-- about-area -->
+       <section class="about__area-three section-py-120">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-9 order-0 order-lg-2">
+                        <div class="about__img-three">
+                            <img src="assets/img/about/inner_project01.jpg" alt="img" class="wow img-custom-anim-right animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about__content-three">
+                            <div class="section__title section__title-three mb-30">
+                                <span class="sub-title">More About Us</span>
+                                <h2 class="title">We pride ourselves on guiding our clients through key strategic decisions</h2>
+                            </div>
+                            <p>At United International Business GmbH, we pride ourselves on guiding our clients through key strategic decisions, leveraging our deep industry knowledge and analytical expertise to facilitate informed choices. Our dedicated team is passionate about helping businesses overcome their most challenging obstacles and achieve sustainable growth.</p>
+                            <p>In addition to our proven track record of facilitating international business endeavors, United International Business GmbH stands out for our innovative approach and client-centric philosophy. By blending cutting-edge solutions with a personalized touch, we ensure that each client receives tailored strategies and unparalleled support that cater to their unique needs and aspirations. Our relentless pursuit of excellence, coupled with a steadfast focus on customer satisfaction, sets us apart as a beacon of reliability and success in the global business landscape.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+       <!-- about-area-end -->
+        <!-- services-area -->
+        <section class="services__area-three section-py-120">
+            <div class="container">
+                <div class="row gutter-24 justify-content-center">
+                    <div class="col-xl-7 col-lg-6 col-md-8">
+                        <div class="services__thumb-three">
+                            <img src="assets/img/about/about_01.jpg" alt="img" class="wow img-custom-anim-left animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="services__content-three">
+                            <h2 class="title">We are guided by a set of core values that prioritize integrity, transparency, and a client-first approach</h2>
+                            <p>At United International Business GmbH, we are guided by a set of core values that prioritize integrity, transparency, and a client-first approach. Our unwavering commitment to exceeding customer expectations drives everything we do, ensuring that every partnership is built on trust, collaboration, and a shared vision for mutual success.</p>
+
+                            <p>We invite you to embark on a transformative journey with United International Business GmbH, where every partnership is a testament to our dedication to your growth and prosperity in the international marketplace. Experience the difference of working with a team that is not just committed to your success but truly invested in your long-term success and satisfaction.</p>
+                        
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- services-area-end -->
+@endsection
