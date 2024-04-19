@@ -82,7 +82,7 @@
                                     <ul class="navigation">
                                         <li class="active"><a href="index.html">Home</a></li>
                                         <li><a href="{{ route('about') }}">About Us</a></li>
-                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="{{ route('services') }}">Services</a></li>
                                         <li><a href="{{ route('projects') }}">Projects</a></li>
                                         <li><a href="{{ route('blog') }}">News</a></li>
                                         <li><a href="{{ route('contact') }}">Contact Us</a></li>
@@ -114,12 +114,6 @@
                 <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
                 <div class="nav-logo">
                     <a href="index.html"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
-                </div>
-                <div class="tgmobile__search">
-                    <form action="#">
-                        <input type="text" placeholder="Search here...">
-                        <button><i class="fas fa-search"></i></button>
-                    </form>
                 </div>
                 <div class="tgmobile__menu-outer">
                     <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -260,13 +254,13 @@
                                         <a href="{{ route('about') }}"><i class="renova-right-arrow"></i><span>About</span></a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('contact') }}"><i class="renova-right-arrow"></i><span>Services</span></a>
+                                        <a href="{{ route('services') }}"><i class="renova-right-arrow"></i><span>Services</span></a>
                                     </li>
                                     <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Projects</span></a>
+                                        <a href="{{ route('projects') }}"><i class="renova-right-arrow"></i><span>Projects</span></a>
                                     </li>
                                     <li>
-                                        <a href="team.html"><i class="renova-right-arrow"></i><span>News</span></a>
+                                        <a href="{{ route('blog') }}"><i class="renova-right-arrow"></i><span>News</span></a>
                                     </li>
                                     <li>
                                         <a href="{{ route('contact') }}"><i class="renova-right-arrow"></i><span>Contact Us</span></a>

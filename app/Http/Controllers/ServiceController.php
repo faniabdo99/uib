@@ -7,6 +7,14 @@ use App\Models\Service;
 use Illuminate\Support\Str;
 
 class ServiceController extends Controller {
+    public function getAll(){
+        $Services = Service::latest()->get();
+        return view('services.all', compact('Services'));
+    }
+
+    public function getSingle(Service $Service){
+        return view('services.single', compact('Service'));
+    }
     // Admin
     public function getAdminAll(){
         $Services = Service::latest()->get();
