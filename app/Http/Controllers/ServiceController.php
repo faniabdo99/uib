@@ -26,7 +26,8 @@ class ServiceController extends Controller {
     public function postAdminNew(Request $r){
         $r->validate([
             'title' => 'required',
-            'image' => 'required'
+            'image' => 'required',
+            'description' => 'required|max:255'
         ]);
         
         $ServiceData = $r->except(['_token', 'image', 'is_featured']);
@@ -51,6 +52,7 @@ class ServiceController extends Controller {
     public function postAdminEdit(Request $r, Service $Service){
         $r->validate([
             'title' => 'required',
+            'description' => 'required|max:255'
         ]);
 
         $ServiceData = $r->except(['_token', 'image', 'is_featured']);

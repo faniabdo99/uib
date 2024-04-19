@@ -11,11 +11,15 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-form">
-                            <form action="{{ route('admin.subServices.postEdit', $Service->id) }}" enctype="multipart/form-data" method="POST">
+                            <form action="{{ route('admin.services.postEdit', $Service->id) }}" enctype="multipart/form-data" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label class="col-form-label">Title</label>
                                     <input name="title" type="text" class="form-control" value="{{ $Service->title }}" required >
+                                </div>
+                                <div class="form-grop">
+                                    <label class="col-form-label">Description</label>
+                                    <textarea name="description" class="form-control" cols="20" rows="10" required>{{ $Service->description }}</textarea>
                                 </div>
                                 <img src="{{ $Service->imagePath }}" style="height: 150px;width: auto;">
                                 <div class="input-group mb-3">

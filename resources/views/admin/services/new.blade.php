@@ -17,6 +17,10 @@
                                     <label class="col-form-label">Title</label>
                                     <input name="title" type="text" class="form-control" required >
                                 </div>
+                                <div class="form-grop">
+                                    <label class="col-form-label">Description</label>
+                                    <textarea name="description" class="form-control" cols="20" rows="10" required></textarea>
+                                </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Service Image</span>

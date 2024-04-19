@@ -177,157 +177,31 @@
     </div>
 </div>
 <div class="row-custom">
-    <div class="col-custom active">
-        <div class="services__item">
-            <div class="services__arrow">
-                <i class="renova-top-right"></i>
+    @forelse(getFeaturedServices(6) as $Service)
+        <div class="col-custom">
+            <div class="services__item">
+                <div class="services__arrow">
+                    <i class="renova-top-right"></i>
+                </div>
+                <div class="services__content">
+                    <h4 class="title">{{ $Service->title }}</h4>
+                </div>
             </div>
-            <div class="services__content">
-                <h4 class="title">Business Consulting</h4>
-                <div class="services__icon">
-                    <i class="renova-flag"></i>
+            <div class="services__item-hidden">
+                <div class="services__thumb">
+                    <a href="{{ route('services.single', [$Service->id, $Service->slug]) }}"><img src="{{ $Service->imagePath }}" alt="{{ $Service->title }}"></a>
+                </div>
+                <div class="services__content-hidden">
+                    <h2 class="title"><a href="{{ route('services.single', [$Service->id, $Service->slug]) }}">{{ $Service->title }}</a></h2>
+                    <p>{{ $Service->description }}</p>
+                    <div class="services__btn">
+                        <a href="{{ route('services.single', [$Service->id, $Service->slug]) }}" class="btn">Learn More <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="services__item-hidden">
-            <div class="services__thumb">
-                <a href="services-details.html"><img src="assets/img/services/services_img01.jpg" alt="img"></a>
-            </div>
-            <div class="services__content-hidden">
-                <h2 class="title"><a href="services-details.html">Business Consulting</a></h2>
-                <p>We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.</p>
-                <div class="services__btn">
-                    <a href="services-details.html" class="btn">Learn More <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-custom">
-        <div class="services__item">
-            <div class="services__arrow">
-                <i class="renova-top-right"></i>
-            </div>
-            <div class="services__content">
-                <h4 class="title">Demining Consulting</h4>
-                <div class="services__icon">
-                    <i class="renova-idea"></i>
-                </div>
-            </div>
-        </div>
-        <div class="services__item-hidden">
-            <div class="services__thumb">
-                <a href="services-details.html"><img src="assets/img/services/services_img02.jpg" alt="img"></a>
-            </div>
-            <div class="services__content-hidden">
-                <h2 class="title"><a href="services-details.html">Demining Consulting</a></h2>
-                <p>We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.</p>
-                <div class="services__btn">
-                    <a href="services-details.html" class="btn">Learn More <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-custom">
-        <div class="services__item">
-            <div class="services__arrow">
-                <i class="renova-top-right"></i>
-            </div>
-            <div class="services__content">
-                <h4 class="title">Security Consulting</h4>
-                <div class="services__icon">
-                    <i class="renova-thumb-screw"></i>
-                </div>
-            </div>
-        </div>
-        <div class="services__item-hidden">
-            <div class="services__thumb">
-                <a href="services-details.html"><img src="assets/img/services/services_img03.jpg" alt="img"></a>
-            </div>
-            <div class="services__content-hidden">
-                <h2 class="title"><a href="services-details.html">Security Consulting</a></h2>
-                <p>We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.</p>
-                <div class="services__btn">
-                    <a href="services-details.html" class="btn">Learn More <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-custom">
-        <div class="services__item">
-            <div class="services__arrow">
-                <i class="renova-top-right"></i>
-            </div>
-            <div class="services__content">
-                <h4 class="title">Energy & Oil Consulting</h4>
-                <div class="services__icon">
-                    <i class="renova-brick"></i>
-                </div>
-            </div>
-        </div>
-        <div class="services__item-hidden">
-            <div class="services__thumb">
-                <a href="services-details.html"><img src="assets/img/services/services_img04.jpg" alt="img"></a>
-            </div>
-            <div class="services__content-hidden">
-                <h2 class="title"><a href="services-details.html">Energy & Oil Consulting</a></h2>
-                <p>We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.</p>
-                <div class="services__btn">
-                    <a href="services-details.html" class="btn">Learn More <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-custom">
-        <div class="services__item">
-            <div class="services__arrow">
-                <i class="renova-top-right"></i>
-            </div>
-            <div class="services__content">
-                <h4 class="title">Project Managment
-                    </h4>
-                <div class="services__icon">
-                    <i class="renova-brick"></i>
-                </div>
-            </div>
-        </div>
-        <div class="services__item-hidden">
-            <div class="services__thumb">
-                <a href="services-details.html"><img src="assets/img/services/services_img04.jpg" alt="img"></a>
-            </div>
-            <div class="services__content-hidden">
-                <h2 class="title"><a href="services-details.html">Project Managment</a></h2>
-                <p>We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.</p>
-                <div class="services__btn">
-                    <a href="services-details.html" class="btn">Learn More <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-custom">
-        <div class="services__item">
-            <div class="services__arrow">
-                <i class="renova-top-right"></i>
-            </div>
-            <div class="services__content">
-                <h4 class="title">Transport & Logistics Consulting</h4>
-                <div class="services__icon">
-                    <i class="renova-brick"></i>
-                </div>
-            </div>
-        </div>
-        <div class="services__item-hidden">
-            <div class="services__thumb">
-                <a href="services-details.html"><img src="assets/img/services/services_img04.jpg" alt="img"></a>
-            </div>
-            <div class="services__content-hidden">
-                <h2 class="title"><a href="services-details.html">Transport & Logistics Consulting</a></h2>
-                <p>We offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.</p>
-                <div class="services__btn">
-                    <a href="services-details.html" class="btn">Learn More <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    @empty
+    @endforelse
 </div>
 </div>
 </section>
@@ -531,11 +405,10 @@
                             <label for="select">Which Service are you looking for?</label>
                             <select name="service_id" id="select" class="orderby" required>
                                 <option value="dasdsa">Select a Service</option>
-                                <option value="1">Project Management</option>
-                                <option value="2">Demining Consulting</option>
-                                <option value="3">Security Consulting</option>
-                                <option value="4">Energy & Oil Consulting </option>
-                                <option value="5">Transport & Logistics Consulting</option>
+                                @forelse(getServices() as $Service)
+                                    <option value="{{ $Service->id }}">{{ $Service->title }}</option>
+                                @empty
+                                @endforelse
                             </select>
                         </div>
                         <div class="form-grp">

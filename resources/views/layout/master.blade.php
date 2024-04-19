@@ -76,16 +76,16 @@
                                     </a>
                                 </div>
                                 <div class="logo">
-                                    <a href="index.html"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
+                                    <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
                                 </div>
                                 <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                     <ul class="navigation">
-                                        <li class="active"><a href="index.html">Home</a></li>
-                                        <li><a href="{{ route('about') }}">About Us</a></li>
-                                        <li><a href="{{ route('services') }}">Services</a></li>
-                                        <li><a href="{{ route('projects') }}">Projects</a></li>
-                                        <li><a href="{{ route('blog') }}">News</a></li>
-                                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                                        <li @if(request()->route()->getName() == 'home') class="active" @endif><a href="{{ route('home') }}">Home</a></li>
+                                        <li @if(request()->route()->getName() == 'about') class="active" @endif><a href="{{ route('about') }}">About Us</a></li>
+                                        <li @if(request()->route()->getName() == 'services') class="active" @endif><a href="{{ route('services') }}">Services</a></li>
+                                        <li @if(request()->route()->getName() == 'projects') class="active" @endif><a href="{{ route('projects') }}">Projects</a></li>
+                                        <li @if(request()->route()->getName() == 'blog') class="active" @endif><a href="{{ route('blog') }}">News</a></li>
+                                        <li @if(request()->route()->getName() == 'contact') class="active" @endif><a href="{{ route('contact') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
                                 <div class=" tgmenu__navbar-wrap tgmenu__main-menu">
@@ -269,37 +269,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-4 col-md-3 col-sm-6">
+                    <div class="col-xl-4 col-lg-8 col-md-6 col-sm-12">
                         <div class="footer__widget">
                             <h4 class="footer__widget-title">Services</h4>
                             <div class="footer__widget-link">
                                 <ul class="list-wrap">
-                                    <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Business Consulting</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Demining Consulting</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Security Consulting</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="services.html"><i class="renova-right-arrow"></i><span>Energy & Oil Consulting</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
-                        <div class="footer__widget">
-                            <div class="footer__widget-link">
-                                <ul class="list-wrap">
-                                    <li>
-                                        <a href="{{ route('about') }}"><i class="renova-right-arrow"></i><span>Travel & Aviation Consulting </span></a>
-                                    </li>
-                                    <li>
-                                        <a href="appointment.html"><i class="renova-right-arrow"></i><span>Transport & Logistics Consulting</span></a>
-                                    </li>
+                                    @forelse(getFeaturedServices(6) as $FeaturedService)
+                                        <li>
+                                            <a href="{{ route('services.single', [$FeaturedService->id, $FeaturedService->slug]) }}"><i class="renova-right-arrow"></i><span>{{ $FeaturedService->title }}</span></a>
+                                        </li>
+                                    @empty
+                                    @endforelse
                                 </ul>
                             </div>
                         </div>
