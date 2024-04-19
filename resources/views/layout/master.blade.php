@@ -45,8 +45,8 @@
                     <div class="col-lg-6">
                         <div class="tg-header__top-menu">
                             <ul class="list-wrap">
-                                <li><a href="contact.html">info@uibswiss.ch</a></li>
-                                <li><a href="contact.html">+1 234 56789</a></li>
+                                <li><a href="{{ route('contact') }}">info@uibswiss.ch</a></li>
+                                <li><a href="{{ route('contact') }}">+1 234 56789</a></li>
                             </ul>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                                         <li><a href="services.html">Services</a></li>
                                         <li><a href="{{ route('projects') }}">Projects</a></li>
                                         <li><a href="blog.html">News</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
                                 <div class=" tgmenu__navbar-wrap tgmenu__main-menu">
@@ -97,7 +97,7 @@
                                             </ul>
                                         </li>
                                         <li class="header-btn get-in-touch">
-                                            <a href="contact.html" class="btn border-btn">Get In Touch</a>
+                                            <a href="{{ route('contact') }}" class="btn border-btn">Get In Touch</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -260,7 +260,7 @@
                                         <a href="{{ route('about') }}"><i class="renova-right-arrow"></i><span>About</span></a>
                                     </li>
                                     <li>
-                                        <a href="contact.html"><i class="renova-right-arrow"></i><span>Services</span></a>
+                                        <a href="{{ route('contact') }}"><i class="renova-right-arrow"></i><span>Services</span></a>
                                     </li>
                                     <li>
                                         <a href="services.html"><i class="renova-right-arrow"></i><span>Projects</span></a>
@@ -269,7 +269,7 @@
                                         <a href="team.html"><i class="renova-right-arrow"></i><span>News</span></a>
                                     </li>
                                     <li>
-                                        <a href="contact.html"><i class="renova-right-arrow"></i><span>Contact Us</span></a>
+                                        <a href="{{ route('contact') }}"><i class="renova-right-arrow"></i><span>Contact Us</span></a>
                                     </li>
                                 </ul>
                             </div>
