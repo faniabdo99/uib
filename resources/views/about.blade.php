@@ -10,7 +10,7 @@
                             <h2 class="title">About Us</h2>
                             <nav class="breadcrumb">
                                 <span property="itemListElement" typeof="ListItem">
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ route('home') }}">Home</a>
                                 </span>
                                 <span class="breadcrumb-separator">/</span>
                                 <span property="itemListElement" typeof="ListItem">About Us</span>

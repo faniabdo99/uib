@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'getHome'])->name('home');
 Route::get('about', [PageController::class, 'getAbout'])->name('about');
+Route::get('contact', [PageController::class, 'getContact'])->name('contact');
 Route::post('/store/contact-request', [ContactRequestController::class, 'store'])->name('contactRequest.store');
 Route::get('projects', [ProjectController::class, 'getAll'])->name('projects');
 Route::get('projects/{Project}/{slug}', [ProjectController::class, 'getSingle'])->name('projects.single');
