@@ -6,11 +6,11 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SubServiceController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Middleware\isAdmin;
-use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'getHome'])->name('home');
@@ -19,6 +19,8 @@ Route::get('contact', [PageController::class, 'getContact'])->name('contact');
 Route::post('/store/contact-request', [ContactRequestController::class, 'store'])->name('contactRequest.store');
 Route::get('blog', [BlogController::class, 'getAll'])->name('blog');
 Route::get('blog/{Blog}/{slug}', [BlogController::class, 'getSingle'])->name('blog.single');
+Route::get('services', [ServiceController::class, 'getAll'])->name('services');
+Route::get('services/{Service}/{slug}', [ServiceController::class, 'getSingle'])->name('services.single');
 Route::get('projects', [ProjectController::class, 'getAll'])->name('projects');
 Route::get('projects/{Project}/{slug}', [ProjectController::class, 'getSingle'])->name('projects.single');
 // Login
@@ -40,6 +42,15 @@ Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'ad
         Route::get('edit/{Service}', [ServiceController::class, 'getAdminEdit'])->name('services.getEdit');
         Route::post('edit/{Service}', [ServiceController::class, 'postAdminEdit'])->name('services.postEdit');
         Route::get('delete/{Service}', [ServiceController::class, 'delete'])->name('services.delete');
+    });
+
+    Route::prefix('sub-services')->group(function(){
+        Route::get('all/{Service}', [SubServiceController::class, 'getAdminAll'])->name('subServices.all');
+        Route::get('new/{Service}', [SubServiceController::class, 'getAdminNew'])->name('subServices.getNew');
+        Route::post('new/{Service}', [SubServiceController::class, 'postAdminNew'])->name('subServices.postNew');
+        Route::get('edit/{SubService}', [SubServiceController::class, 'getAdminEdit'])->name('subServices.getEdit');
+        Route::post('edit/{SubService}', [SubServiceController::class, 'postAdminEdit'])->name('subServices.postEdit');
+        Route::get('delete/{SubService}', [SubServiceController::class, 'delete'])->name('subServices.delete');
     });
 
     Route::prefix('categories')->group(function(){
