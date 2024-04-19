@@ -81,7 +81,7 @@
                                 <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                     <ul class="navigation">
                                         <li class="active"><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="{{ route('about') }}">About Us</a></li>
                                         <li><a href="services.html">Services</a></li>
                                         <li><a href="{{ route('projects') }}">Projects</a></li>
                                         <li><a href="blog.html">News</a></li>
@@ -257,7 +257,7 @@
                             <div class="footer__widget-link">
                                 <ul class="list-wrap">
                                     <li>
-                                        <a href="about.html"><i class="renova-right-arrow"></i><span>About</span></a>
+                                        <a href="{{ route('about') }}"><i class="renova-right-arrow"></i><span>About</span></a>
                                     </li>
                                     <li>
                                         <a href="contact.html"><i class="renova-right-arrow"></i><span>Services</span></a>
@@ -301,7 +301,7 @@
                             <div class="footer__widget-link">
                                 <ul class="list-wrap">
                                     <li>
-                                        <a href="about.html"><i class="renova-right-arrow"></i><span>Travel & Aviation Consulting </span></a>
+                                        <a href="{{ route('about') }}"><i class="renova-right-arrow"></i><span>Travel & Aviation Consulting </span></a>
                                     </li>
                                     <li>
                                         <a href="appointment.html"><i class="renova-right-arrow"></i><span>Transport & Logistics Consulting</span></a>
