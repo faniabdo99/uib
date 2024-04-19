@@ -105,12 +105,10 @@
                                     <div class="form-grp">
                                         <select name="service_id" id="select" class="orderby">
                                             <option value="Select your subject">Select a Service</option>
-                                            <option value="1">Project Management</option>
-                                            <option value="Subject One">Business Consulting</option>
-                                            <option value="Subject Two">Demining Consulting</option>
-                                            <option value="Subject Three">Security Consulting</option>
-                                            <option value="Subject Four">Energy & Oil Consulting </option>
-                                            <option value="Subject Four">Transport & Logistics Consulting</option>
+                                            @forelse(getServices() as $Service)
+                                                <option value="{{ $Service->id }}">{{ $Service->title }}</option>
+                                            @empty
+                                            @endforelse
                                         </select>
                                     </div>
                                 </div>

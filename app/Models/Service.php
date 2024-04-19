@@ -4,11 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class Service extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function scopeFeatured(Builder $query): void {
+        $query->where('is_featured', 1);
+    }
 
     public function User(){
         return $this->belongsTo(User::class, 'user_id');
