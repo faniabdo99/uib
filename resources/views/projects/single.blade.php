@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__content">
-                        <h2 class="title">Project Details</h2>
+                        <h2 class="title">{{ $Project->title }}</h2>
                         <nav class="breadcrumb">
                             <span property="itemListElement" typeof="ListItem">
                                 <a href="{{ route('home') }}">Home</a>
@@ -78,7 +78,6 @@
                     <div class="col-71">
                         <div class="project__details-content">
                             <span class="sub-title">{{ $Project->Category->title }}</span>
-                            <h2 class="title">{{ $Project->title }}</h2>
                             {!! $Project->content !!}
                         </div>
                     </div>
