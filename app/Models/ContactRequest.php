@@ -14,4 +14,8 @@ class ContactRequest extends Model {
     public function getShortMessageAttribute() {
         return Str::limit($this->message, 15);
     }
+
+    public function Service() {
+        return $this->belongsTo(Service::class, 'service_id');
+    }
 }
