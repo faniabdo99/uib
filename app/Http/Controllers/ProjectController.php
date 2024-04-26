@@ -44,6 +44,7 @@ class ProjectController extends Controller {
             'title' => 'required',
             'content' => 'required',
             'image' => 'required',
+            'lang' => 'required',
         ]);
         $ProjectData = $r->except(['_token', 'image']);
         // Generate the slug
@@ -70,6 +71,7 @@ class ProjectController extends Controller {
         $r->validate([
             'title' => 'required',
             'content' => 'required',
+            'lang' => 'required',
         ]);
         $ProjectData = $r->except(['_token']);
         if ($r->hasFile('image')) {

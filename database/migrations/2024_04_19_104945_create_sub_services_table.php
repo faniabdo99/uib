@@ -17,6 +17,7 @@ return new class() extends Migration {
             $table->string('description');
             $table->integer('user_id');
             $table->integer('service_id');
+            $table->string('lang')->default('en');
             $table->timestamps();
         });
     }

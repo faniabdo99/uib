@@ -15,7 +15,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label class="col-form-label">Title</label>
-                                    <input name="title" type="text" class="form-control" required >
+                                    <input name="title" type="text" class="form-control" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -25,6 +25,13 @@
                                         <input name="image" type="file" class="custom-file-input">
                                         <label class="custom-file-label">Choose file</label>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Language <span class="text-danger">*</span></label>
+                                    <select class="form-control" name="lang" required>
+                                        <option value="ar">Arabic</option>
+                                        <option value="en">English</option>
+                                    </select>
                                 </div>
                                 <div class="from-group">
                                     <label class="col-form-label">Description</label>

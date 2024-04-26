@@ -5,18 +5,18 @@
         <div class="row align-items-end">
             <div class="col-lg-8">
                 <div class="cta__content">
-                    <h2 class="title">Ready to work  <br> with us?</h2>
+                    <h2 class="title">@lang('cta.cta_title')</h2>
                     <div class="cta__btn">
-                        <a href="contact.html" class="btn btn-two">Let’s work together <img
+                        <a href="contact.html" class="btn btn-two">@lang('cta.cta_btn_1') <img
                                 src="assets/img/icons/right_arrow.svg" alt="" class="injectable"></a>
-                        <a href="contact.html" class="btn transparent-btn">Contact With Us <img
+                        <a href="contact.html" class="btn transparent-btn">@lang('cta.cta_btn_2') <img
                                 src="assets/img/icons/right_arrow.svg" alt="" class="injectable"></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="cta__content-right" data-aos="fade-up" data-aos-delay="600">
-                    <h4 class="title">Leveraging our deep consulting expertise & using analytical rigor</h4>
+                    <h4 class="title">@lang('cta.cta_content')</h4>
                 </div>
             </div>
         </div>

@@ -9,10 +9,10 @@
                         <h2 class="title">{{ $Project->title }}</h2>
                         <nav class="breadcrumb">
                             <span property="itemListElement" typeof="ListItem">
-                                <a href="{{ route('home') }}">Home</a>
+                                <a href="{{ route('home') }}">@lang('projects.home')</a>
                             </span>
                             <span class="breadcrumb-separator">/</span>
-                            <span property="itemListElement" typeof="ListItem">Project Details</span>
+                            <span property="itemListElement" typeof="ListItem">@lang('projects.projects_details')</span>
                         </nav>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="col-29">
                         <div class="project__details-info">
-                            <h3 class="info-title">Project Information</h3>
+                            <h3 class="info-title">@lang('projects.projects_information')</h3>
                             <div class="project__info-item-wrap">
                                 @if($Project->client)
                                     <div class="project__info-item">
@@ -36,7 +36,7 @@
                                             <i class="fas fa-user"></i>
                                         </div>
                                         <div class="content">
-                                            <span>Clients:</span>
+                                            <span>@lang('projects.clients')</span>
                                             <h4 class="title">{{ $Project->client }}</h4>
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@
                                         <i class="fas fa-layer-group"></i>
                                     </div>
                                     <div class="content">
-                                        <span>Category:</span>
+                                        <span>@lang('projects.category')</span>
                                         <h4 class="title">{{ $Project->Category->title }}</h4>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                             <i class="fas fa-calendar-alt"></i>
                                         </div>
                                         <div class="content">
-                                            <span>Date:</span>
+                                            <span>@lang('projects.date')</span>
                                             <h4 class="title">{{ $Project->date->format('d F, Y') }}</h4>
                                         </div>
                                     </div>
@@ -67,7 +67,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                         <div class="content">
-                                            <span>Address:</span>
+                                            <span>@lang('projects.address')</span>
                                             <h4 class="title">{{ $Project->address }}</h4>
                                         </div>
                                     </div>

@@ -6,13 +6,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__content">
-                        <h2 class="title">Our Services</h2>
+                        <h2 class="title">@lang('services.services_title')</h2>
                         <nav class="breadcrumb">
                             <span property="itemListElement" typeof="ListItem">
-                                <a href="{{ route('home') }}">Home</a>
+                                <a href="{{ route('home') }}">@lang('services.home')</a>
                             </span>
                             <span class="breadcrumb-separator">/</span>
-                            <span property="itemListElement" typeof="ListItem">Our Services</span>
+                            <span property="itemListElement" typeof="ListItem">@lang('services.services_title')</span>
                         </nav>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 @empty
-                    <p>No Services!</p>
+                    <p>@lang('services.no_services')</p>
                 @endforelse
             </div>
         </div>

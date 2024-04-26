@@ -57,6 +57,13 @@
                                     <label class="col-form-label">Address</label>
                                     <input name="address" type="text" class="form-control" value="{{ $Project->address }}">
                                 </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Language <span class="text-danger">*</span></label>
+                                    <select class="form-control" name="lang" required>
+                                        <option @if($Blog->lang == 'ar') selected @endif  value="ar">Arabic</option>
+                                        <option @if($Blog->lang == 'en') selected @endif value="en">English</option>
+                                    </select>
+                                </div>
                                 <button class="btn btn-primary">Submit</button>
                             </form>
                         </div>
@@ -75,13 +82,13 @@
         tinymce.init({
           selector: 'textarea.editor'
         });
-        let myDropzone = new Dropzone("div#gallery-upload", { 
+        let myDropzone = new Dropzone("div#gallery-upload", {
             url: "{{ route('admin.projects.uploadGallery' , $Project->id) }}",
             method: 'POST',
             paramName: 'file',
             maxFilesize: 10,
             maxFiles: 5,
-            acceptedFiles: 'image/*'  
+            acceptedFiles: 'image/*'
         });
     </script>
 @endsection

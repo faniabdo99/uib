@@ -20,6 +20,7 @@ class CategoryController extends Controller {
     public function postAdminNew(Request $r) {
         $r->validate([
             'title' => 'required',
+            'lang' => 'required',
         ]);
         $CategoryData = $r->except(['_token']);
         // Generate the slug
@@ -36,6 +37,7 @@ class CategoryController extends Controller {
     public function postAdminEdit(Request $r, Category $Category) {
         $r->validate([
             'title' => 'required',
+            'lang' => 'required',
         ]);
         $CategoryData = $r->except(['_token']);
         $Category->update($CategoryData);

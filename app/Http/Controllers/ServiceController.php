@@ -33,6 +33,7 @@ class ServiceController extends Controller {
             'title' => 'required',
             'image' => 'required',
             'description' => 'required|max:255',
+            'lang' => 'required',
         ]);
 
         $ServiceData = $r->except(['_token', 'image', 'is_featured']);
@@ -59,6 +60,7 @@ class ServiceController extends Controller {
         $r->validate([
             'title' => 'required',
             'description' => 'required|max:255',
+            'lang' => 'required',
         ]);
 
         $ServiceData = $r->except(['_token', 'image', 'is_featured']);

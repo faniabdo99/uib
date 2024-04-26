@@ -11,13 +11,13 @@
                     <div class="blog__details-content">
                         <div class="blog__post-meta">
                             <ul class="list-wrap">
-                                <li>By <a href="#">{{ $Blog->User->name }}</a></li>
+                                <li>@lang('blog.by') <a href="#">{{ $Blog->User->name }}</a></li>
                                 <li>{{ $Blog->created_at->format('D M, Y') }}</li>
                             </ul>
                         </div>
                         <h2 class="title">{{ $Blog->title }}</h2>
                         {!! $Blog->content !!}
-                    </div>  
+                    </div>
                 </div>
             </div>
         </div>

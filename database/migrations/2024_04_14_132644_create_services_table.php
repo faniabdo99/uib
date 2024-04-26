@@ -16,6 +16,7 @@ return new class() extends Migration {
             $table->string('slug');
             $table->text('upper_content')->nullable();
             $table->text('lower_content')->nullable();
+            $table->string('lang')->default('en');
             $table->integer('user_id');
             $table->integer('is_featured')->default(0);
             $table->timestamps();

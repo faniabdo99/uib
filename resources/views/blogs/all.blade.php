@@ -6,13 +6,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__content">
-                        <h2 class="title">Blog</h2>
+                        <h2 class="title">@lang('blog.blog_title')</h2>
                         <nav class="breadcrumb">
                             <span property="itemListElement" typeof="ListItem">
-                                <a href="{{ route('home') }}">Home</a>
+                                <a href="{{ route('home') }}">@lang('blog.home')</a>
                             </span>
                             <span class="breadcrumb-separator">/</span>
-                            <span property="itemListElement" typeof="ListItem">BLog</span>
+                            <span property="itemListElement" typeof="ListItem">@lang('blog.blog_title')</span>
                         </nav>
                     </div>
                 </div>
@@ -34,23 +34,23 @@
                             <div class="blog__post-content-two">
                                 <div class="blog__post-meta">
                                     <ul class="list-wrap">
-                                        <li>By <a href="{{ route('blog.single' , [ $Article->id, $Article->slug ]) }}">{{ $Article->User->name }}</a></li>
+                                        <li>@lang('blog.by') <a href="{{ route('blog.single' , [ $Article->id, $Article->slug ]) }}">{{ $Article->User->name }}</a></li>
                                         <li>{{ $Article->created_at->format('D M, Y') }}</li>
                                     </ul>
                                 </div>
                                 <h2 class="title"><a href="{{ route('blog.single' , [$Article->id, $Article->slug]) }}">{{ $Article->title }}</a></h2>
                                 <p>{{ $Article->description }}</p>
-                                <a href="{{ route('blog.single' , [$Article->id, $Article->slug]) }}" class="btn btn-two">Read Details</a>
+                                <a href="{{ route('blog.single' , [$Article->id, $Article->slug]) }}" class="btn btn-two">@lang('blog.blog_details')</a>
                             </div>
                         </div>
                     @empty
-                        <p>No articles!</p>
+                        <p>@lang('blog.no_articles')</p>
                     @endforelse
                 </div>
                 <div class="col-lg-4">
                     <aside class="blog__sidebar">
                         <div class="blog__widget">
-                            <h4 class="blog__widget-title">Recent Posts</h4>
+                            <h4 class="blog__widget-title">@lang('blog.recent_posts')</h4>
                             <div class="blog__rc-post-wrap">
                                 @forelse($Blogs->take(3) as $Article)
                                     <div class="blog__rc-post-item">
