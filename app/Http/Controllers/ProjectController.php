@@ -11,8 +11,8 @@ use Illuminate\Support\Str;
 
 class ProjectController extends Controller {
     public function getAll() {
-        $Categories = Category::latest()->get();
-        $Projects = Project::latest()->get();
+        $Categories = Category::Language()->latest()->get();
+        $Projects = Project::Language()->latest()->get();
 
         return view('projects.all', compact('Categories', 'Projects'));
     }

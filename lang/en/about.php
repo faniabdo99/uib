@@ -1,6 +1,6 @@
 <?php
 return [
-    'about_title' => 'About Us AR',
+    'about_title' => 'About Us',
     'home' => 'Home',
     'about_sub_title' => 'More About Us',
     'services_content_title' => 'We are guided by a set of core values that prioritize integrity, transparency, and a client-first approach</h2>',

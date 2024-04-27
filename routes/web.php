@@ -14,7 +14,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SubServiceController;
 
 use App\Http\Middleware\isAdmin;
-Route::get('lang/{locale}', [PageController::class, 'getSwitchlang' ])->name('switchLang');
+Route::get('lang/{locale}', [ PageController::class, 'getSwitchlang' ])->name('switchLang');
 
 Route::get('/', [ HomeController::class, 'getHome' ])->name('home');
 Route::get('about', [ PageController::class, 'getAbout' ])->name('about');

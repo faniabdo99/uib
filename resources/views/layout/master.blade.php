@@ -99,13 +99,14 @@
                                 </div>
                                 <div class=" tgmenu__navbar-wrap tgmenu__main-menu">
                                     <ul class="list-wrap navigation">
-                                        <li class="menu-item-has-children"><a href="#" class="btn-lang">
+                                        <li class="menu-item-has-children">
+                                            <a href="#" class="btn-lang">
                                             @if(session()->get('locale') == 'ar')
-                                            AR
+                                                AR
                                             @elseif(session()->get('locale') == 'en' )
-                                            EN
+                                                EN
                                             @else
-                                            EN
+                                                EN
                                             @endif
                                         </a>
                                             <ul class="sub-menu">

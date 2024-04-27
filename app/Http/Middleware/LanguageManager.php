@@ -5,7 +5,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 class LanguageManager{
     public function handle(Request $request, Closure $next){
