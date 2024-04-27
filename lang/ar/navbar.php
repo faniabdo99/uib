@@ -1,14 +1,15 @@
 <?php
+
 return [
-    'home' => 'Home' ,
-    'about_us' => 'About Us' ,
-    'services' => 'Services' ,
-    'projects' => 'Projects' ,
-    'news' => 'News' ,
-    'contact_us' => 'Contact Us' ,
-    'get_in_touch' => 'Get In Touch' ,
-    'office_address' => 'Office Address' ,
-    'office_location' => 'Swissra, <br> Geneva' ,
-    'phone_number' => 'Phone Number' ,
-    'email_address' => 'Email Address' ,
+    'home' => 'الرئيسية',
+    'about_us' => 'من نحن',
+    'services' => 'خدماتنا',
+    'projects' => 'مشاريعنا',
+    'news' => 'الاخبار',
+    'contact_us' => 'تواصل معنا',
+    'get_in_touch' => 'لنبقى على اتصال',
+    'office_address' => 'عنوان المكاتب',
+    'office_location' => 'سويسرا، <br> جنيف',
+    'phone_number' => 'رقم الهاتف',
+    'email_address' => 'البريد الالكتروني',
 ];

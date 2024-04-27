@@ -1,4 +1,5 @@
 <?php
+
 return [
     'contact_title' => 'Contact Us',
     'home' => 'Home',
@@ -13,5 +14,5 @@ return [
     'phone_number' => 'Phone Number',
     'services_select' => 'Select a Service',
     'message_placeholder' => 'Type Your Message',
-    'submit_form' => 'Send Message',
+    'submit_form' => 'Send',
 ];

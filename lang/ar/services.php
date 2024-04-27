@@ -1,8 +1,9 @@
 <?php
+
 return [
-    'services_title' => 'Our Services',
-    'home' => 'Home',
-    'no_services' => 'No Services!',
-    'sub_services' => 'SUB SERVICES',
-    'email' => 'Email US',
+    'services_title' => 'خدماتنا',
+    'home' => 'الرئيسية',
+    'no_services' => 'لاتوجد خدمات!',
+    'sub_services' => 'خدمات فرعية',
+    'email' => 'راسلنا عبر البريد الإلكتروني',
 ];

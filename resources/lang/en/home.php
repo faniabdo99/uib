@@ -1,4 +1,5 @@
 <?php
+
 return [
     'hero_sec_slide_1_sub_title' => 'We\'re Working Since 2016 in the this Field',
     'hero_sec_slide_1_title' => 'We help Entrepreneurse Get Ready To Raise Capital',
@@ -51,9 +52,9 @@ return [
     'all_blogs_btn' => 'View All Posts',
     'blog_cta' => 'Read Details',
 
-
     'contact_btn' => 'Contact Us Now',
     'view_services_btn' => 'View Our Services',
+    'view_projects_btn' => 'View Our Projects',
     'learn_more_btn' => 'Learn More',
 
 ];

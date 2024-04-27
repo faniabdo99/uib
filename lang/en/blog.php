@@ -1,4 +1,5 @@
 <?php
+
 return [
     'blog_title' => 'Blog',
     'home' => 'Home',

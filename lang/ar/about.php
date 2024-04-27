@@ -1,29 +1,30 @@
 <?php
+
 return [
-    'about_title' => 'Taysser Ibrahim',
-    'home' => 'Home',
-    'about_sub_title' => 'More About Us',
-    'services_content_title' => 'We are guided by a set of core values that prioritize integrity, transparency, and a client-first approach</h2>',
-    'services_content_decription' => '<p>United International Business GmbH is a family-owned company located in Thurgau canton, Switzerland, founded in 2016. Our primary focus is on facilitating international business transactions between China, the Middle East, and the EU. With a commitment to providing essential services for your company\'s success in the global market, we specialize in advising and supporting leading global companies across various industries.
+    'about_title' => 'من نحن',
+    'home' => 'الرئيسية',
+    'about_sub_title' => 'عنا',
+    'services_content_title' => 'نستند إلى مجموعة من القيم الأساسية التي تعطي الأولوية للنزاهة والشفافية والتوجه نحو العميل. يحركنا التزامنا الثابت بتجاوز توقعات العملاء في كل ما نقوم به</h2>',
+    'services_content_decription' => '<p>شركة يونايتد انترناشونال بيزنس(United International Business GmbH) هي شركة مملوكة لعائلة اللامي في سويسرا ومقرها في كانتون تورغاو، سويسرا، تأسست في عام 2016. تركز شركتنا الرئيسية على تيسير المعاملات التجارية الدولية بين الصين والشرق الأوسط والاتحاد الأوروبي. مع التزامنا بتقديم الخدمات الأساسية لنجاح شركتك في السوق العالمية، نختص في تقديم الاستشارات والدعم للشركات العالمية الرائدة في مختلف الصناعات.
     </p>
-    <p>United International Business GmbH is proud to be the only Swiss company providing such services in Iraq, showcasing our dedication to expanding our reach and offering unparalleled expertise in the region.
+    <p>تفخر شركة يونايتد انترناشونال بيزنس بأنها الشركة السويسرية الوحيدة التي تقدم مثل هذه الخدمات في العراق، مما يظهر التزامنا بتوسيع نطاقنا وتقديم خبرة لا مثيل لها في المنطقة.
     </p>',
-    'about_ceo_title' => 'CEO Message',
-    'about_ceo_message' => '<p class="fst-italic">As the CEO of United International Business GmbH, I am honored to lead a team that is dedicated to excellence, innovation, and unwavering commitment to our clients\' success. Our journey in the global business landscape has been defined by our relentless pursuit of growth, our passion for overcoming challenges, and our relentless focus on building lasting partnerships.
+    'about_ceo_title' => 'كلمة من الرئيس التنفيذي',
+    'about_ceo_message' => '<p class="fst-italic">بصفتي الرئيس التنفيذي لشركة يونايتد إنترناشيونال بزنس، أشعر بالشرف بقيادة فريق مكرس للتميز والابتكار والتفاني اللاهتزازي في نجاح عملائنا. تميزت رحلتنا في المشهد التجاري العالمي بسعينا الدؤوب نحو النمو، وشغفنا بتجاوز التحديات، وتركيزنا الدؤوب على بناء شراكات دائمة.
     </p>
-    <p>At United International Business GmbH, we believe in the power of collaboration, the strength of diversity, and the importance of integrity in all that we do. Our team is driven by a shared vision of creating a positive impact on the world through our work, and we are committed to pushing boundaries, embracing change, and always striving for the highest standards of quality and service.
+    <p>في شركة يونايتد إنترناشيونال بزنس، نؤمن بقوة التعاون، وقوة التنوع، وأهمية النزاهة في كل ما نقوم به. يدفع فريقنا رؤية مشتركة لإحداث تأثير إيجابي على العالم من خلال عملنا، ونحن ملتزمون بدفع الحدود، واعتناق التغيير، والسعي دائمًا نحو أعلى معايير الجودة والخدمة.
     </p>
-    <p>I am proud of the work we have accomplished so far especially in Iraq and excited about the opportunities that lie ahead. Together, we will continue to push the boundaries of what is possible, inspire each other to reach new heights, and make a meaningful difference in the lives of our clients, partners, and communities.
+    <p>أنا فخور بالعمل الذي قمنا به حتى الآن ومتحمس للفرص المتاحة في المستقبل. وخاصة في العراق ، سنواصل معًا دفع حدود ما هو ممكن، وتحفيز بعضنا البعض لتحقيق أعلى المستويات، وتحقيق فارق معنوي في حياة عملائنا وشركائنا والمجتمعات.
     </p>
-    <p>Thank you for being a part of our journey. Your trust and support mean the world to us, and we look forward to continuing to serve you with dedication, passion, and a relentless drive for success.
-    <br>Warm regards,
+    <p>شكرًا لكونك جزءًا من رحلتنا. ثقتكم ودعمكم تعني الكثير لنا، ونتطلع إلى مواصلة خدمتكم بتفانٍ وشغف ودافع مستمر من اجل النجاح.
+    <br>تحياتي,
     </p>',
-    'about_ceo_name' => 'wissam alamy',
-    'about_ceo_position' => 'CEO, United International Business GmbH',
-    'about_section_2_title' => 'We pride ourselves on guiding our clients through key strategic decisions',
-    'about_section_2_content' => ' <p>At United International Business GmbH, we pride ourselves on guiding our clients through key strategic decisions, leveraging our deep industry knowledge and analytical expertise to facilitate informed choices. Our dedicated team is passionate about helping businesses overcome their most challenging obstacles and achieve sustainable growth.</p>
-    <p>In addition to our proven track record of facilitating international business endeavors, United International Business GmbH stands out for our innovative approach and client-centric philosophy. By blending cutting-edge solutions with a personalized touch, we ensure that each client receives tailored strategies and unparalleled support that cater to their unique needs and aspirations. Our relentless pursuit of excellence, coupled with a steadfast focus on customer satisfaction, sets us apart as a beacon of reliability and success in the global business landscape.</p>',
-    'about_section_3_title' => 'We are guided by a set of core values that prioritize integrity, transparency, and a client-first approach',
-    'about_section_3_content' => '<p>At United International Business GmbH, we are guided by a set of core values that prioritize integrity, transparency, and a client-first approach. Our unwavering commitment to exceeding customer expectations drives everything we do, ensuring that every partnership is built on trust, collaboration, and a shared vision for mutual success.</p>
-    <p>We invite you to embark on a transformative journey with United International Business GmbH, where every partnership is a testament to our dedication to your growth and prosperity in the international marketplace. Experience the difference of working with a team that is not just committed to your success but truly invested in your long-term success and satisfaction.</p>',
+    'about_ceo_name' => 'وسام اللامي',
+    'about_ceo_position' => 'الرئيس التنفيذي، شركة يونايتد إنترناشيونال بزنس',
+    'about_section_2_title' => 'نفتخر بتوجيه عملائنا من خلال القرارات الاستراتيجية الرئيسية، واستغلال معرفتنا العميقة في الصناعة وخبرتنا التحليلية لتيسير اتخاذ القرارات المستنيرة. ',
+    'about_section_2_content' => ' <p>في شركة يونايتد انترناشونال بيزنس ، نفتخر بتوجيه عملائنا من خلال القرارات الاستراتيجية الرئيسية، واستغلال معرفتنا العميقة في الصناعة وخبرتنا التحليلية لتيسير اتخاذ القرارات المستنيرة. فريقنا المخصص متحمس لمساعدة الشركات على التغلب على أصعب تحدياتها وتحقيق النمو المستدام.</p>
+    <p>بالإضافة إلى سجلنا المثبت في تيسير المشاريع التجارية الدولية، تتميز شركة يونايتد انترناشونال بيزنس بنهجها المبتكر وفلسفتها الموجهة نحو العميل. من خلال مزج الحلول الحديثة بلمسة شخصية، نضمن أن يتلقى كل عميل استراتيجيات مصممة خصيصًا ودعمًا لا مثيل له يلبي احتياجاته وطموحاته الفريدة. تميزنا السعي الحثيث نحو التميز، إلى جانب التركيز الثابت على رضا العملاء، يجعلنا مثالًا للموثوقية والنجاح في المشهد العملي العالمي.</p>',
+    'about_section_3_title' => 'نستند إلى مجموعة من القيم الأساسية التي تعطي الأولوية للنزاهة والشفافية والتوجه نحو العميل.',
+    'about_section_3_content' => '<p>في شركة يونايتد انترناشونال بيزنس، نستند إلى مجموعة من القيم الأساسية التي تعطي الأولوية للنزاهة والشفافية والتوجه نحو العميل. يحركنا التزامنا الثابت بتجاوز توقعات العملاء في كل ما نقوم به، مما يضمن أن يكون كل شراكة مبنية على الثقة والتعاون ورؤية مشتركة للنجاح المتبادل.</p>
+    <p>ندعوكم للانطلاق في رحلة تحولية مع شركة يونايتد انترناشونال بيزنس السويسرية حيث تكون كل شراكة عبارة عن دليل على تفانينا في نموكم وازدهاركم في السوق العالمية. اكتشف الفارق في العمل مع فريق ليس فقط ملتزم بنجاحكم، ولكن مستثمر حقًا في نجاحكم ورضاكم على المدى الطويل.</p>',
 ];
