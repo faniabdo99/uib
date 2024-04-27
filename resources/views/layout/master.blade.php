@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/tg-cursor.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    @if(app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="{{ asset('assets/css/mainAr.css') }}">
+    @endif
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT6JSE6ELT"></script>
     <script>

@@ -46,7 +46,7 @@
                                     <textarea name="content" class="editor" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-form-label">Clinets</label>
+                                    <label class="col-form-label">Clients</label>
                                     <input name="clients" type="text" class="form-control" >
                                 </div>
                                 <div class="form-group">

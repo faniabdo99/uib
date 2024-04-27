@@ -12,7 +12,7 @@
                                 <span class="sub-title">@lang('home.hero_sec_slide_1_sub_title')</span>
                                 <h2 class="title">@lang('home.hero_sec_slide_1_title')</h2>
                                 <div class="slider__btn">
-                                    <a href="services.html" class="btn btn-two">@lang('home.view_services_btn') <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
+                                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
                                     <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn popup-video">@lang('home.contact_btn')</a>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                                 <span class="sub-title">@lang('home.hero_sec_slide_2_sub_title')</span>
                                 <h2 class="title">@lang('home.hero_sec_slide_2_title')</h2>
                                 <div class="slider__btn">
-                                    <a href="services.html" class="btn btn-two">@lang('home.view_services_btn') <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
+                                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="assets/img/icons/right_arrow.svg" alt=""  class="injectable"></a>
                                     <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn popup-video">@lang('home.contact_btn')</a>
                                 </div>
                             </div>
@@ -218,65 +218,35 @@
             </div>
             <div class="col-lg-6 col-md-4">
                 <div class="section__title Project-section mb-60">
-                    <a href="contact.html" class="btn btn-two">@lang('home.view_services_btn') <img src="assets/img/icons/right_arrow.svg" alt="" class="injectable"></a>
+                    <a href="{{ route('projects') }}" class="btn btn-two">@lang('home.view_projects_btn') <img src="assets/img/icons/right_arrow.svg" alt="" class="injectable"></a>
                     <div class="project__nav">
                         <button class="project-button-prev"><i class="renova-left-arrow"></i></button>
                         <button class="project-button-next"><i class="renova-right-arrow"></i></button>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="swiper project-active">
             <div class="swiper-wrapper">
+                @forelse ($FeaturedProjects as $Project)
                 <div class="swiper-slide">
                     <div class="project__item">
                         <div class="project__thumb">
-                            <a href="project-details.html"><img src="assets/img/project/project_img01.jpg" alt="img"></a>
+                            <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><img src="{{ $Project->imagePath }}" alt="{{ $Project->title }}"></a>
                         </div>
                         <div class="project__content">
                             <div class="content">
-                                <h2 class="title"><a href="project-details.html">Registration at the Ministry of Trade (MOT) and the DMA</a></h2>
-                                <span>December 2023 - March 2024</span>
+                                <h2 class="title"><a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}">{{ $Project->title }}</a></h2>
+                                <span>{{ $Project->date }}</span>
                             </div>
                             <div class="project__icon">
-                                <a href="project-details.html"><i class="fas fa-plus"></i></a>
+                                <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><i class="fas fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="project__item">
-                        <div class="project__thumb">
-                            <a href="project-details.html"><img src="assets/img/project/project_img02.jpg" alt="img"></a>
-                        </div>
-                        <div class="project__content">
-                            <div class="content">
-                                <h2 class="title"><a href="project-details.html">Local employees, Deminers, Level 3 and level 4 EOD personals</a></h2>
-                                <span>December 2023 - March 2024</span>
-                            </div>
-                            <div class="project__icon">
-                                <a href="project-details.html"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project__item">
-                        <div class="project__thumb">
-                            <a href="project-details.html"><img src="assets/img/project/project_img02.jpg" alt="img"></a>
-                        </div>
-                        <div class="project__content">
-                            <div class="content">
-                                <h2 class="title"><a href="project-details.html">Demining equipment, mine clearance machines</a></h2>
-                                <span>December 2023 - March 2024</span>
-                            </div>
-                            <div class="project__icon">
-                                <a href="project-details.html"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @empty
+                @endforelse
             </div>
         </div>
     </div>
@@ -433,46 +403,30 @@
                         <h2 class="title">@lang('home.blog_area_title')</h2>
                     </div>
                     <p>@lang('home.blog_area_description')</p>
-                    <a href="blog.html" class="btn border-btn">@lang('home.all_blogs_btn')</a>
+                    <a href="{{ route('blog') }}" class="btn border-btn">@lang('home.all_blogs_btn')</a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="blog__post-item shine__animate-item">
-                    <div class="blog__post-thumb">
-                        <a href="blog-details.html" class="shine__animate-link">
-                            <img src="assets/img/blog/blog_img02.jpg" alt="img">
-                        </a>
-                    </div>
-                    <div class="blog__post-content">
-                        <div class="blog__post-meta">
-                            <ul class="list-wrap">
-                                <li>03 January, 2024</li>
-                            </ul>
+            @forelse($FeaturedArticles as $Article)
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog__post-item shine__animate-item">
+                        <div class="blog__post-thumb">
+                            <a href="{{ route('blog.single', [$Article->id, $Article->slug]) }}" class="shine__animate-link">
+                                <img src="{{ $Article->imagePath }}" alt="{{ $Article->title }}">
+                            </a>
                         </div>
-                        <h4 class="title"><a href="blog-details.html">Comprehensive Look at Foundation
-                        Types and Construction</a></h4>
-                        <a href="blog-details.html" class="btn">Read Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="blog__post-item shine__animate-item">
-                    <div class="blog__post-thumb">
-                        <a href="blog-details.html" class="shine__animate-link">
-                            <img src="assets/img/blog/blog_img03.jpg" alt="img">
-                        </a>
-                    </div>
-                    <div class="blog__post-content">
-                        <div class="blog__post-meta">
-                            <ul class="list-wrap">
-                                <li>03 January, 2024</li>
-                            </ul>
+                        <div class="blog__post-content">
+                            <div class="blog__post-meta">
+                                <ul class="list-wrap">
+                                    <li>{{ $Article->created_at->format('d M Y') }}</li>
+                                </ul>
+                            </div>
+                            <h4 class="title"><a href="{{ route('blog.single', [$Article->id, $Article->slug]) }}">{{ $Article->title }}</a></h4>
+                            <a href="{{ route('blog.single', [$Article->id, $Article->slug]) }}" class="btn">Read Details</a>
                         </div>
-                        <h4 class="title"><a href="blog-details.html">Building a Culture of Construction Site Safety and Compliance</a></h4>
-                        <a href="blog-details.html" class="btn">@lang('home.blog_cta')</a>
                     </div>
                 </div>
-            </div>
+            @empty
+            @endforelse
         </div>
     </div>
 </section>
