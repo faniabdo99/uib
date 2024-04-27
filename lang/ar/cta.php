@@ -1,7 +1,7 @@
 <?php
 return [
-    'cta_title' => 'Ready to work  <br> with us?',
-    'cta_btn_1' => 'Let’s work together',
-    'cta_btn_2' => 'Contact With Us',
-    'cta_content' => 'Leveraging our deep consulting expertise & using analytical rigor',
+    'cta_title' => 'هل أنت مستعد<br>للعمل معنا؟',
+    'cta_btn_1' => 'دعونا نعمل معا',
+    'cta_btn_2' => 'اتصل بنا',
+    'cta_content' => 'الاستفادة من خبرتنا الاستشارية العميقة واستخدام الدقة التحليلية',
 ];

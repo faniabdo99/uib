@@ -1,9 +1,9 @@
 <?php
 return [
-    'blog_title' => 'Blog',
-    'home' => 'Home',
-    'by' => 'by',
-    'blog_details' => 'Read Details',
-    'no_articles' => 'No articles!',
-    'recent_posts' => 'Recent Posts',
+    'blog_title' => 'الاخبار',
+    'home' => 'الرئيسية',
+    'by' => 'بواسطة',
+    'blog_details' => 'اقرأ التفاصيل',
+    'no_articles' => '!لاتوجد اخبار',
+    'recent_posts' => 'اخر الاخبار',
 ];

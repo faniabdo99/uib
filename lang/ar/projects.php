@@ -1,12 +1,12 @@
 <?php
 return [
-    'projects_title' => 'Our Projects',
-    'home' => 'Home',
-    'all_works' => 'ALL WORKS',
-    'projects_details' => 'Project Details',
-    'projects_information' => 'Project Information',
-    'clients' => 'Clients:',
-    'category' => 'Category:',
-    'date' => 'Date:',
-    'address' => 'Address:',
+    'projects_title' => 'مشاريعنا',
+    'home' => 'الرئيسية',
+    'all_works' => 'جميع الاعمال',
+    'projects_details' => 'تفاصيل المشروع',
+    'projects_information' => 'معلومات المشروع',
+    'clients' => 'الزبائن:',
+    'category' => 'القسم:',
+    'date' => 'التاريخ:',
+    'address' => 'العنوان:',
 ];
