@@ -54,6 +54,7 @@ return [
 
     'contact_btn' => 'Contact Us Now',
     'view_services_btn' => 'View Our Services',
+    'view_projects_btn' => 'View Our Projects',
     'learn_more_btn' => 'Learn More',
 
 ];
