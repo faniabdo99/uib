@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/tg-cursor.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    @if(app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="{{ asset('assets/css/mainAr.css') }}">
+    @endif
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT6JSE6ELT"></script>
     <script>
@@ -89,24 +92,46 @@
                                 </div>
                                 <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                     <ul class="navigation">
-                                        <li @if(request()->route()->getName() == 'home') class="active" @endif><a href="{{ route('home') }}">Home</a></li>
-                                        <li @if(request()->route()->getName() == 'about') class="active" @endif><a href="{{ route('about') }}">About Us</a></li>
-                                        <li @if(request()->route()->getName() == 'services') class="active" @endif><a href="{{ route('services') }}">Services</a></li>
-                                        <li @if(request()->route()->getName() == 'projects') class="active" @endif><a href="{{ route('projects') }}">Projects</a></li>
-                                        <li @if(request()->route()->getName() == 'blog') class="active" @endif><a href="{{ route('blog') }}">News</a></li>
-                                        <li @if(request()->route()->getName() == 'contact') class="active" @endif><a href="{{ route('contact') }}">Contact Us</a></li>
+                                        <li @if(request()->route()->getName() == 'home') class="active" @endif><a href="{{ route('home') }}">@lang('navbar.home')</a></li>
+                                        <li @if(request()->route()->getName() == 'about') class="active" @endif><a href="{{ route('about') }}">@lang('navbar.about_us')</a></li>
+                                        <li @if(request()->route()->getName() == 'services') class="active" @endif><a href="{{ route('services') }}" class="menu-item-has-children">@lang('navbar.services')</a></li>
+                                        <ul class="list-wrap">
+                                        @forelse(getFeaturedServices(6) as $FeaturedService)
+                                            <li>
+                                                <a href="{{ route('services.single', [$FeaturedService->id, $FeaturedService->slug]) }}"><i class="renova-right-arrow"></i><span>{{ $FeaturedService->title }}</span></a>
+                                            </li>
+                                        @empty
+                                        @endforelse
+                                </ul>
+                                        <li @if(request()->route()->getName() == 'projects') class="active" @endif><a href="{{ route('projects') }}">@lang('navbar.projects')</a></li>
+                                        <li @if(request()->route()->getName() == 'blog') class="active" @endif><a href="{{ route('blog') }}">@lang('navbar.news')</a></li>
+                                        <li @if(request()->route()->getName() == 'contact') class="active" @endif><a href="{{ route('contact') }}">@lang('navbar.contact_us')</a></li>
                                     </ul>
                                 </div>
                                 <div class=" tgmenu__navbar-wrap tgmenu__main-menu">
                                     <ul class="list-wrap navigation">
-                                        <li class="menu-item-has-children"><a href="#" class="btn-lang">EN</a>
+                                        <li class="menu-item-has-children">
+                                            <a href="#" class="btn-lang">
+                                            @if(session()->get('locale') == 'ar')
+                                                AR
+                                            @elseif(session()->get('locale') == 'en' )
+                                                EN
+                                            @else
+                                                EN
+                                            @endif
+                                        </a>
                                             <ul class="sub-menu">
-                                                <li><a href="#">En</a></li>
-                                                <li><a href="#">AR</a></li>
+                                                @if(session()->get('locale') == 'ar')
+                                                <li><a href="{{route('switchLang' , 'en')}}"> En</a></li>
+                                                @elseif(session()->get('locale') == 'en' )
+                                                <li><a href="{{route('switchLang' , 'ar')}}">AR</a></li>
+                                                @else
+                                                <li><a href="{{route('switchLang' , 'en')}}"> En</a></li>
+                                                @endif
                                             </ul>
                                         </li>
                                         <li class="header-btn get-in-touch">
-                                            <a href="{{ route('contact') }}" class="btn border-btn">Get In Touch</a>
+                                            <a href="{{ route('contact') }}" class="btn border-btn">@lang('navbar.get_in_touch')</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -187,16 +212,16 @@
             </div>
             <div class="offCanvas__side-info mb-30">
                 <div class="contact-list mb-30">
-                    <h4>Office Address</h4>
-                    <p>Swissra, <br> Geneva</p>
+                    <h4>@lang('navbar.office_address')</h4>
+                    <p>@lang('navbar.office_location')</p>
                 </div>
                 <div class="contact-list mb-30">
-                    <h4>Phone Number</h4>
+                    <h4>@lang('navbar.phone_number')</h4>
                     <p>+1 1234 567</p>
                     <p>+1 1234 567</p>
                 </div>
                 <div class="contact-list mb-30">
-                    <h4>Email Address</h4>
+                    <h4>@lang('navbar.email_address')</h4>
                     <p>info@uibswiss.ch</p>
                     <p>Wissam@uibswiss.ch</p>
                 </div>
@@ -242,7 +267,7 @@
                                 <a href="index.html"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="logo"></a>
                             </div>
                             <div class="footer__content">
-                                <p>Our company was founded on the idea of helping those doing business between China, Middle East, and EU.</p>
+                                <p>@lang('navbar.footer_content')</p>
                             </div>
                             <div class="footer__social">
                                 <ul class="list-wrap">
@@ -256,23 +281,23 @@
                     </div>
                     <div class="col-xl-2 col-lg-4 col-md-3 col-sm-4">
                         <div class="footer__widget">
-                            <h4 class="footer__widget-title">Main Pages</h4>
+                            <h4 class="footer__widget-title">@lang('navbar.main_pages')</h4>
                             <div class="footer__widget-link">
                                 <ul class="list-wrap">
                                     <li>
-                                        <a href="{{ route('about') }}"><i class="renova-right-arrow"></i><span>About</span></a>
+                                        <a href="{{ route('about') }}"><i class="renova-right-arrow"></i><span>@lang('navbar.about_us')</span></a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('services') }}"><i class="renova-right-arrow"></i><span>Services</span></a>
+                                        <a href="{{ route('services') }}"><i class="renova-right-arrow"></i><span>@lang('navbar.services')</span></a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('projects') }}"><i class="renova-right-arrow"></i><span>Projects</span></a>
+                                        <a href="{{ route('projects') }}"><i class="renova-right-arrow"></i><span>@lang('navbar.projects')</span></a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('blog') }}"><i class="renova-right-arrow"></i><span>News</span></a>
+                                        <a href="{{ route('blog') }}"><i class="renova-right-arrow"></i><span>@lang('navbar.news')</span></a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('contact') }}"><i class="renova-right-arrow"></i><span>Contact Us</span></a>
+                                        <a href="{{ route('contact') }}"><i class="renova-right-arrow"></i><span>@lang('navbar.contact_us')</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -280,7 +305,7 @@
                     </div>
                     <div class="col-xl-4 col-lg-8 col-md-6 col-sm-12">
                         <div class="footer__widget">
-                            <h4 class="footer__widget-title">Services</h4>
+                            <h4 class="footer__widget-title">@lang('navbar.services')</h4>
                             <div class="footer__widget-link">
                                 <ul class="list-wrap">
                                     @forelse(getFeaturedServices(6) as $FeaturedService)
@@ -305,7 +330,7 @@
             <div class="footer__bottom footer__bottom-two">
                 <div class="row align-items-center">
                         <div class="copyright-text text-center">
-                            <p>© 2024 UIB. All Rights Reserved</p>
+                            <p>@lang('navbar.rights')</p>
                         </div>
                 </div>
             </div>

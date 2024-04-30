@@ -13,6 +13,7 @@ return new class() extends Migration {
             $table->id();
             $table->string('title');
             $table->string('user_id');
+            $table->string('lang')->default('en');
             $table->timestamps();
         });
     }

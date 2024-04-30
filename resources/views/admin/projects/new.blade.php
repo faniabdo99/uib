@@ -46,7 +46,7 @@
                                     <textarea name="content" class="editor" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-form-label">Clinets</label>
+                                    <label class="col-form-label">Clients</label>
                                     <input name="clients" type="text" class="form-control" >
                                 </div>
                                 <div class="form-group">
@@ -56,6 +56,13 @@
                                 <div class="form-group">
                                     <label class="col-form-label">Address</label>
                                     <input name="address" type="text" class="form-control" >
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Language <span class="text-danger">*</span></label>
+                                    <select class="form-control" name="lang" required>
+                                        <option value="ar">Arabic</option>
+                                        <option value="en">English</option>
+                                    </select>
                                 </div>
                                 <button class="btn btn-primary">Submit</button>
                             </form>
@@ -75,13 +82,13 @@
         tinymce.init({
           selector: 'textarea.editor'
         });
-        let myDropzone = new Dropzone("div#gallery-upload", { 
+        let myDropzone = new Dropzone("div#gallery-upload", {
             url: "{{ route('admin.projects.uploadGallery' , $nextProjectId) }}",
             method: 'POST',
             paramName: 'file',
             maxFilesize: 10,
             maxFiles: 5,
-            acceptedFiles: 'image/*'  
+            acceptedFiles: 'image/*'
         });
     </script>
 @endsection

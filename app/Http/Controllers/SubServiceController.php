@@ -21,6 +21,7 @@ class SubServiceController extends Controller {
         $r->validate([
             'title' => 'required',
             'image' => 'required',
+            'lang' => 'required',
         ]);
         $SubServiceData = $r->except(['_token', 'image']);
         // Generate the slug
@@ -44,6 +45,7 @@ class SubServiceController extends Controller {
     public function postAdminEdit(Request $r, SubService $SubService) {
         $r->validate([
             'title' => 'required',
+            'lang' => 'required',
         ]);
 
         $SubServiceData = $r->except(['_token', 'image']);

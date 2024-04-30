@@ -9,7 +9,7 @@
                         <h2 class="title">{{ $Service->title }}</h2>
                         <nav class="breadcrumb">
                             <span property="itemListElement" typeof="ListItem">
-                                <a href="{{ route('home') }}">Home</a>
+                                <a href="{{ route('home') }}">@lang('services.home')</a>
                             </span>
                             <span class="breadcrumb-separator">/</span>
                             <span property="itemListElement" typeof="ListItem">{{ $Service->title }}</span>
@@ -40,7 +40,7 @@
     </section>
     <!-- services-details-area-end -->
 
-    
+
 
     <!-- choose-area -->
     <section class="choose__area-two section-py-120">
@@ -48,8 +48,8 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8">
                     <div class="section__title section__title-three text-center mb-60 ">
-                        <span class="sub-title">Service</span>
-                        <h2 class="title">SUB SERVICES</h2>
+                        <span class="sub-title">@lang('services.services_title')</span>
+                        <h2 class="title">@lang('services.sub_services')</h2>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                                 <div class="choose__item-content">
                                     <h2 class="title">{{ $SubService->title }}</h2>
                                     <p>{{ $SubService->description }}</p>
-                                    <a href="{{ route('contact') }}" class="btn">Email Us</a>
+                                    <a href="{{ route('contact') }}" class="btn">@lang('services.email')</a>
                                 </div>
                             </div>
                         </div>

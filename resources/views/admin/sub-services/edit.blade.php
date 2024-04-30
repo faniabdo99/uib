@@ -35,6 +35,13 @@
                                     <label class="col-form-label">Description:</label>
                                     <textarea name="description" class="form-control" cols="30" rows="10">{{ $SubService->description }}</textarea>
                                 </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Language <span class="text-danger">*</span></label>
+                                    <select class="form-control" name="lang" required>
+                                        <option @if($SubService->lang == 'ar') selected @endif  value="ar">Arabic</option>
+                                        <option @if($SubService->lang == 'en') selected @endif value="en">English</option>
+                                    </select>
+                                </div>
                                 <button class="btn btn-primary">Submit</button>
                             </form>
                         </div>

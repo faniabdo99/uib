@@ -13,6 +13,8 @@ use App\Http\Controllers\SubServiceController;
 use App\Http\Middleware\isAdmin;
 use Illuminate\Support\Facades\Route;
 
+Route::get('lang/{locale}', [PageController::class, 'getSwitchlang'])->name('switchLang');
+
 Route::get('/', [HomeController::class, 'getHome'])->name('home');
 Route::get('about', [PageController::class, 'getAbout'])->name('about');
 Route::get('contact', [PageController::class, 'getContact'])->name('contact');
@@ -79,5 +81,5 @@ Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'ad
         Route::post('edit/{Blog}', [BlogController::class, 'postAdminEdit'])->name('blogs.postEdit');
         Route::get('delete/{Blog}', [BlogController::class, 'delete'])->name('blogs.delete');
     });
-
 });
+Route::post('api/upload/{project}', [ProjectController::class, 'uploadGallery'])->name('admin.projects.uploadGallery');

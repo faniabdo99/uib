@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class BlogController extends Controller {
     public function getAll() {
-        $Blogs = Blog::latest()->get();
+        $Blogs = Blog::Language()->latest()->get();
 
         return view('blogs.all', compact('Blogs'));
     }
@@ -34,6 +34,7 @@ class BlogController extends Controller {
             'description' => 'required',
             'content' => 'required',
             'image' => 'required',
+            'lang' => 'required',
         ]);
         $BlogData = $r->except(['_token', 'image']);
         // Generate the slug
@@ -58,6 +59,7 @@ class BlogController extends Controller {
         $r->validate([
             'title' => 'required',
             'content' => 'required',
+            'lang' => 'required',
         ]);
         $BlogData = $r->except(['_token']);
         if ($r->hasFile('image')) {

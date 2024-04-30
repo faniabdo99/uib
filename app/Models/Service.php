@@ -11,6 +11,10 @@ class Service extends Model {
 
     protected $guarded = [];
 
+    public function scopeLanguage(Builder $builder): void {
+        $builder->where('lang', app()->getLocale());
+    }
+
     public function scopeFeatured(Builder $query): void {
         $query->where('is_featured', 1);
     }

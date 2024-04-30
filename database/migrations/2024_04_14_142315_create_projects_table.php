@@ -16,6 +16,7 @@ return new class() extends Migration {
             $table->string('image')->default('placeholder.png');
             $table->integer('category_id');
             $table->text('content');
+            $table->string('lang')->default('en');
             $table->integer('user_id');
             $table->string('clients')->nullable();
             $table->string('date')->nullable();

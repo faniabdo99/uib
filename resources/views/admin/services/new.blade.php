@@ -39,6 +39,13 @@
                                     <textarea name="lower_content" class="editor" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="form-group">
+                                    <label class="form-control-label">Language <span class="text-danger">*</span></label>
+                                    <select class="form-control" name="lang" required>
+                                        <option value="ar">Arabic</option>
+                                        <option value="en">English</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <input type="checkbox" class="mr-2" name="is_featured">
                                     <label class="col-form-label">Featured?</label>
                                 </div>

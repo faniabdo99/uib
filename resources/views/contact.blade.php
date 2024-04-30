@@ -6,13 +6,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__content">
-                        <h2 class="title">Contact Us</h2>
+                        <h2 class="title">@lang('contact.contact_title')</h2>
                         <nav class="breadcrumb">
                             <span property="itemListElement" typeof="ListItem">
-                                <a href="{{ route('home') }}">Home</a>
+                                <a href="{{ route('home') }}">@lang('contact.home')</a>
                             </span>
                             <span class="breadcrumb-separator">/</span>
-                            <span property="itemListElement" typeof="ListItem">Contact Us</span>
+                            <span property="itemListElement" typeof="ListItem">@lang('contact.contact_title')</span>
                         </nav>
                     </div>
                 </div>
@@ -36,8 +36,8 @@
                                     <i class="renova-map"></i>
                                 </div>
                                 <div class="content">
-                                    <span>Location</span>
-                                    <h2 class="title">Swissra, Geneva</h2>
+                                    <span>@lang('contact.location_title')</span>
+                                    <h2 class="title">@lang('contact.location')</h2>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                                     <i class="renova-envelope-open"></i>
                                 </div>
                                 <div class="content">
-                                    <span>Email us</span>
+                                    <span>@lang('contact.email')</span>
                                     <h2 class="title"><a href="mailto:info@uibswiss.ch">info@uibswiss.ch</a></h2>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                                     <i class="renova-headphone"></i>
                                 </div>
                                 <div class="content">
-                                    <span>Call Us</span>
+                                    <span>@lang('contact.call')</span>
                                     <h2 class="title"><a href="tel:0123456789">+12 345 6789</a></h2>
                                 </div>
                             </div>
@@ -79,8 +79,8 @@
                     <!-- contact-map-end -->
                     <div class="contact__form-wrap">
                         <div class="section__title section__title-three mb-40">
-                            <span class="sub-title">Get In Touch</span>
-                            <h2 class="title">Schedule a Free consultation Meeting
+                            <span class="sub-title">@lang('contact.form_sub_title')</span>
+                            <h2 class="title">@lang('contact.form_title')
                             </h2>
                         </div>
                         <form action="{{ route('contactRequest.store') }}" method="POST" class="contact__form">
@@ -88,23 +88,23 @@
                             <div class="row gutter-20">
                                 <div class="col-md-6">
                                     <div class="form-grp">
-                                        <input type="text" name="name" placeholder="Your Name">
+                                        <input type="text" name="name" placeholder="@lang('contact.name')">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-grp">
-                                        <input type="email" name="email" placeholder="Email Address">
+                                        <input type="email" name="email" placeholder="@lang('contact.email')">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-grp">
-                                        <input type="number" name="phone_number" placeholder="Phone Number">
+                                        <input type="number" name="phone_number" placeholder="@lang('contact.phone_number')">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-grp">
                                         <select name="service_id" id="select" class="orderby">
-                                            <option value="Select your subject">Select a Service</option>
+                                            <option value="Select your subject">@lang('contact.services_select')</option>
                                             @forelse(getServices() as $Service)
                                                 <option value="{{ $Service->id }}">{{ $Service->title }}</option>
                                             @empty
@@ -114,9 +114,9 @@
                                 </div>
                             </div>
                             <div class="form-grp">
-                                <textarea name="message" placeholder="Type Your Message"></textarea>
+                                <textarea name="message" placeholder="@lang('contact.message_placeholder')"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-two">Send Message</button>
+                            <button type="submit" class="btn btn-two">@lang('contact.submit_form')</button>
                         </form>
                     </div>
                 </div>

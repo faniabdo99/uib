@@ -40,6 +40,13 @@
                                     <textarea name="lower_content" class="editor" cols="30" rows="10">{!! $Service->lower_content !!}</textarea>
                                 </div>
                                 <div class="form-group">
+                                    <label class="form-control-label">Language <span class="text-danger">*</span></label>
+                                    <select class="form-control" name="lang" required>
+                                        <option @if($Service->lang == 'ar') selected @endif  value="ar">Arabic</option>
+                                        <option @if($Service->lang == 'en') selected @endif value="en">English</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <input type="checkbox" @if($Service->is_featured) checked @endif class="mr-2" name="is_featured">
                                     <label class="col-form-label">Featured?</label>
                                 </div>
