@@ -94,7 +94,15 @@
                                     <ul class="navigation">
                                         <li @if(request()->route()->getName() == 'home') class="active" @endif><a href="{{ route('home') }}">@lang('navbar.home')</a></li>
                                         <li @if(request()->route()->getName() == 'about') class="active" @endif><a href="{{ route('about') }}">@lang('navbar.about_us')</a></li>
-                                        <li @if(request()->route()->getName() == 'services') class="active" @endif><a href="{{ route('services') }}">@lang('navbar.services')</a></li>
+                                        <li @if(request()->route()->getName() == 'services') class="active" @endif><a href="{{ route('services') }}" class="menu-item-has-children">@lang('navbar.services')</a></li>
+                                        <ul class="list-wrap">
+                                        @forelse(getFeaturedServices(6) as $FeaturedService)
+                                            <li>
+                                                <a href="{{ route('services.single', [$FeaturedService->id, $FeaturedService->slug]) }}"><i class="renova-right-arrow"></i><span>{{ $FeaturedService->title }}</span></a>
+                                            </li>
+                                        @empty
+                                        @endforelse
+                                </ul>
                                         <li @if(request()->route()->getName() == 'projects') class="active" @endif><a href="{{ route('projects') }}">@lang('navbar.projects')</a></li>
                                         <li @if(request()->route()->getName() == 'blog') class="active" @endif><a href="{{ route('blog') }}">@lang('navbar.news')</a></li>
                                         <li @if(request()->route()->getName() == 'contact') class="active" @endif><a href="{{ route('contact') }}">@lang('navbar.contact_us')</a></li>

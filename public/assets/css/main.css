@@ -11998,7 +11998,8 @@ textarea {
         26. Brand
 ===============================*/
 .brand__item {
-  min-height: 43px;
+  max-width: 150px;
+  min-height: 20px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -12006,9 +12007,19 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 .brand__item img {
   cursor: pointer;
+  max-width: 110px;
+}
+.brand__item .small-logo {
+  max-width: 100%;
+}
+.swiper-wrapper {
+  align-items: center;
+  justify-content: center;
+}
 }
 
 /*=============================
