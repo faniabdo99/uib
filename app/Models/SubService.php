@@ -19,6 +19,6 @@ class SubService extends Model {
     }
 
     public function getImagePathAttribute() {
-        return asset('sub-services/' . $this->image);
+        return url('public/sub-services/' . $this->image);
     }
 }

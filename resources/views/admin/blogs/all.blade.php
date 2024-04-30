@@ -48,6 +48,6 @@
 @endsection
 @section('external_scripts')
     <!-- Datatable -->
-    <script src="{{ asset('admin/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('admin/js/plugins-init/datatables.init.js') }}"></script>
+    <script src="{{ url('public/admin/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ url('public/admin/js/plugins-init/datatables.init.js') }}"></script>
 @endsection

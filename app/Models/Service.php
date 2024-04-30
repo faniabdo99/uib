@@ -28,6 +28,6 @@ class Service extends Model {
     }
 
     public function getImagePathAttribute() {
-        return asset('services/' . $this->image);
+        return url('public/services/' . $this->image);
     }
 }
