@@ -49,7 +49,7 @@
 </section>
 <!-- slider-area-end -->
 <!-- about-area -->
-<section class="about__area section-pb-120 section-py-120">
+<section class="about__area section-pb-60 section-py-120">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 col-md-9">
@@ -97,27 +97,12 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="brand__item">
-                        <img src="assets/img/brand/brand_img01.png" alt="img">
+                        <img class="small-logo" src="assets/img/brand/brand_img04.png" alt="img">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand__item">
-                        <img src="assets/img/brand/brand_img02.png" alt="img">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand__item">
-                        <img src="assets/img/brand/brand_img03.png" alt="img">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand__item">
-                        <img src="assets/img/brand/brand_img04.png" alt="img">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand__item">
-                        <img src="assets/img/brand/brand_img05.png" alt="img">
+                        <img class="small-logo" src="assets/img/brand/brand_img05.png" alt="img">
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -125,11 +110,7 @@
                         <img src="assets/img/brand/brand_img06.png" alt="img">
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="brand__item">
-                        <img src="assets/img/brand/brand_img03.png" alt="img">
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>

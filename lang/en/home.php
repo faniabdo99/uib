@@ -2,11 +2,11 @@
 
 return [
     'hero_sec_slide_1_sub_title' => 'We\'re Working Since 2016 in the this Field',
-    'hero_sec_slide_1_title' => 'We help Entrepreneurse Get Ready To Raise Capital',
+    'hero_sec_slide_1_title' => 'Your Partner In Iraq',
     'hero_sec_slide_2_sub_title' => 'We\'re Working Since 2016 in the this Field',
-    'hero_sec_slide_2_title' => 'We help Entrepreneurse Get Ready To Raise Capital',
+    'hero_sec_slide_2_title' => 'Your Partner In China',
     'hero_sec_slide_3_sub_title' => 'We\'re Working Since 2016 in the this Field',
-    'hero_sec_slide_3_title' => 'We help Entrepreneurse Get Ready To Raise Capital',
+    'hero_sec_slide_3_title' => 'Your Partner In Switzerland',
 
     'about_area_sub_title' => 'Let’s work together',
     'about_area_title' => 'UIB SWISS GMBH FOUNDED IN SWITZERLAND, TG IN 2016',
@@ -14,16 +14,16 @@ return [
     In UIB SWISS GmbH we counsel our clients on their key strategic issues, leveraging our deep industry expertise and using analytical rigor to help them make informed decisions more quickly and solve their toughest and most critical business problems.',
     'about_area_cta_title' => 'Know Us More',
 
-    'brand_area_sub_title' => 'Brands We Work For',
-    'brand_area_title' => 'We have a lot of work for companies',
+    'brand_area_sub_title' => 'Brands We Work with',
+    'brand_area_title' => 'Clients & Partners',
 
     'cta_area_title' => 'We provide all the information for making the right decisions in business',
 
     'services_area_title' => 'Exceptional Consulting services and insight from the start.',
 
-    'projects_area_title' => 'Project we’ve done in very recent time.',
+    'projects_area_title' => 'Projects we’ve done in very recent time.',
 
-    'faq_area_title' => 'We are Expert in those industry',
+    'faq_area_title' => 'We have expertise in these fields',
     'faq_area_sub_title' => 'Leveraging our deep consulting expertise <br>& using analytical rigor',
     'faq_1_title' => 'WHAT DOES UIB SWISS DO?',
     'faq_1_content' => 'We help entrepreneurs get ready to raise capital, start a new business, registration in Iraq, China and Switzerland.',
