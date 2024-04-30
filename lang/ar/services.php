@@ -1,4 +1,5 @@
 <?php
+
 return [
     'services_title' => 'خدماتنا',
     'home' => 'الرئيسية',

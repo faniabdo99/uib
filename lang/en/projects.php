@@ -1,4 +1,5 @@
 <?php
+
 return [
     'projects_title' => 'Our Projects',
     'home' => 'Home',

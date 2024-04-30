@@ -1,4 +1,5 @@
 <?php
+
 return [
     'about_title' => 'من نحن',
     'home' => 'الرئيسية',

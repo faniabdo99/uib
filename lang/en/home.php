@@ -1,4 +1,5 @@
 <?php
+
 return [
     'hero_sec_slide_1_sub_title' => 'We\'re Working Since 2016 in the this Field',
     'hero_sec_slide_1_title' => 'Your Partner In Iraq',
@@ -50,7 +51,6 @@ return [
     'blog_area_description' => 'Sociis dapibus imperdiet sapien vehicula risus nec odio ultrices, pharetra tristique ultricies dui augue litora semper conubia, sodales felis aliquam.',
     'all_blogs_btn' => 'View All Posts',
     'blog_cta' => 'Read Details',
-
 
     'contact_btn' => 'Contact Us Now',
     'view_services_btn' => 'View Our Services',

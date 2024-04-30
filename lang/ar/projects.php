@@ -1,4 +1,5 @@
 <?php
+
 return [
     'projects_title' => 'مشاريعنا',
     'home' => 'الرئيسية',

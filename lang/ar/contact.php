@@ -1,4 +1,5 @@
 <?php
+
 return [
     'contact_title' => 'تواصل معنا',
     'home' => 'الرئيسية',

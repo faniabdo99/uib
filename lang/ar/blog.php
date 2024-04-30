@@ -1,4 +1,5 @@
 <?php
+
 return [
     'blog_title' => 'الاخبار',
     'home' => 'الرئيسية',

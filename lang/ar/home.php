@@ -1,4 +1,5 @@
 <?php
+
 return [
     'hero_sec_slide_1_sub_title' => 'نحن نعمل منذ عام 2016 في هذا المجال',
     'hero_sec_slide_1_title' => 'شريككم في العراق',
@@ -50,11 +51,8 @@ return [
     'blog_area_description' => 'Sociis dapibus imperdiet sapien vehicula risus nec odio ultrices, pharetra tristique ultricies dui augue litora semper conubia, sodales felis aliquam.',
     'all_blogs_btn' => 'عرض جميع الاخبار',
     'blog_cta' => 'اقرأ التفاصيل',
-
-
     'contact_btn' => 'اتصل بنا الآن',
     'view_services_btn' => 'عرض خدماتنا',
     'view_projects_btn' => 'عرض مشاريعنا',
-    'learn_more_btn' => 'تعرف على المزيد',
-
+    'learn_more_btn' => 'تعرف على المزيد'
 ];
