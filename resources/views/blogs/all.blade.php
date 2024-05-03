@@ -1,7 +1,7 @@
 @extends('layout.master')
 @section('content')
     <!-- breadcrumb-area -->
-    <div class="breadcrumb__area breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
+    <div class="breadcrumb__area breadcrumb__bg" data-background="{{ url('public/assets/img/bg/breadcrumb_bg.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
