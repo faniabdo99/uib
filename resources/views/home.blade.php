@@ -57,7 +57,7 @@
                     <img src="{{ url('public/assets/img/images/aboutus.jpg') }}" alt="img">
                     <div class="about__img-content">
                         <h4 class="title">@lang('home.about_area_sub_title')</h4>
-                        <a href="contact.html" class="btn">@lang('home.contact_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+                        <a href="{{ route('contact') }}" class="btn">@lang('home.contact_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
             </div>
             <div class="col-lg-5">
                 <div class="cta__btn">
-                    <a href="contact.html" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+                    <a href="{{ route('contact') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
                     <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn transparent-btn popup-video">@lang('home.contact_btn')</a>
                 </div>
             </div>
@@ -152,7 +152,7 @@
     </div>
     <div class="col-lg-6">
         <div class="section__title view-service-btn mb-60">
-            <a href="contact.html" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+            <a href="{{ route('contact') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
         </div>
     </div>
 </div>
