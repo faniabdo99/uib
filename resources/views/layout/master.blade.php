@@ -6,23 +6,23 @@
     <title>UIB - United International Business</title>
     <meta name="description" content="UIB Swiss - United International Business GmbH">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('public/assets/img/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}">
     <!-- CSS here -->
-    <link rel="stylesheet" href="{{ url('public/assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/fontawesome-all.min.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/fontello.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/default-icons.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/default.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/odometer.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/jquery-ui.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/aos.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/tg-cursor.css') }}">
-    <link rel="stylesheet" href="{{ url('public/assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontello.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/default-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/default.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/tg-cursor.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     @if(app()->getLocale() == 'ar')
-        <link rel="stylesheet" href="{{ url('public/assets/css/mainAr.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/mainAr.css') }}">
     @endif
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT6JSE6ELT"></script>
@@ -39,7 +39,7 @@
     <div id="preloader">
         <div id="loader" class="loader">
             <div class="loader-container">
-                <div class="loader-icon"><img src="{{ url('public/assets/img/logo/preloader.svg') }}" alt="Preloader"></div>
+                <div class="loader-icon"><img src="{{ asset('assets/img/logo/preloader.svg') }}" alt="Preloader"></div>
             </div>
         </div>
     </div>
@@ -84,11 +84,11 @@
                             <nav class="tgmenu__nav">
                                 <div class="offCanvas-toggle">
                                     <a href="javascript:void(0)" class="menu-tigger">
-                                        <img src="{{ url('public/assets/img/icons/bar_icon.svg') }}" alt="" class="injectable">
+                                        <img src="{{ asset('assets/img/icons/bar_icon.svg') }}" alt="" class="injectable">
                                     </a>
                                 </div>
                                 <div class="logo">
-                                    <a href="{{ route('home') }}"><img src="{{ url('public/assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
+                                    <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
                                 </div>
                                 <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                     <ul class="navigation">
@@ -147,7 +147,7 @@
             <nav class="tgmobile__menu-box">
                 <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
                 <div class="nav-logo">
-                    <a href="index.html"><img src="{{ url('public/assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
+                    <a href="index.html"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
                 </div>
                 <div class="tgmobile__menu-outer">
                     <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -208,7 +208,7 @@
                 <button><i class="far fa-window-close"></i></button>
             </div>
             <div class="offCanvas__logo mb-30">
-                <a href="index.html"><img src="{{ url('public/assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
+                <a href="index.html"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="Logo"></a>
             </div>
             <div class="offCanvas__side-info mb-30">
                 <div class="contact-list mb-30">
@@ -264,7 +264,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                         <div class="footer__widget">
                             <div class="footer__logo">
-                                <a href="index.html"><img src="{{ url('public/assets/img/logo/uib-logo-title.svg') }}" alt="logo"></a>
+                                <a href="index.html"><img src="{{ asset('assets/img/logo/uib-logo-title.svg') }}" alt="logo"></a>
                             </div>
                             <div class="footer__content">
                                 <p>@lang('navbar.footer_content')</p>
@@ -321,7 +321,7 @@
                     <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
                         <div class="footer__widget">
                             <div class="footer__logo text-center">
-                                <a href="index.html"><img class="right-logo" src="{{ url('public/assets/img/logo/uib-logo.svg') }}" alt="logo"></a>
+                                <a href="index.html"><img class="right-logo" src="{{ asset('assets/img/logo/uib-logo.svg') }}" alt="logo"></a>
                             </div>
                         </div>
                     </div>
@@ -338,23 +338,23 @@
     </footer>
     <!-- footer-area-end -->
     <!-- JS here -->
-    <script src="{{ url('public/assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/jquery.odometer.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/jquery.appear.js') }}"></script>
-    <script src="{{ url('public/assets/js/swiper-bundle.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/jquery.marquee.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/tg-cursor.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/ajax-form.js') }}"></script>
-    <script src="{{ url('public/assets/js/jquery-ui.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/svg-inject.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/tween-max.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/wow.min.js') }}"></script>
-    <script src="{{ url('public/assets/js/aos.js') }}"></script>
-    <script src="{{ url('public/assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.odometer.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.appear.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.marquee.min.js') }}"></script>
+    <script src="{{ asset('assets/js/tg-cursor.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ajax-form.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/js/svg-inject.min.js') }}"></script>
+    <script src="{{ asset('assets/js/tween-max.min.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/aos.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
     <script>
         SVGInject(document.querySelectorAll("img.injectable"));
     </script>
