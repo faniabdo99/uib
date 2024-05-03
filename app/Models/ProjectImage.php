@@ -11,6 +11,6 @@ class ProjectImage extends Model {
     protected $guarded = [];
 
     public function getImagePathAttribute() {
-        return url('public/projects_gallery/' . $this->image);
+        return url('storage/projects_gallery/' . $this->image);
     }
 }

@@ -28,7 +28,7 @@ class Project extends Model {
     }
 
     public function getImagePathAttribute() {
-        return url('public/projects/' . $this->image);
+        return url('storage/projects/' . $this->image);
     }
 
     protected function casts() {
