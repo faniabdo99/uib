@@ -29,7 +29,7 @@ Route::get('projects/{Project}/{slug}', [ProjectController::class, 'getSingle'])
 Route::get('login', [AuthController::class, 'getLogin'])->name('login.get');
 Route::post('login', [AuthController::class, 'postLogin'])->name('login.post');
 // Admin Routes
-Route::group(['prefix' => 'admin', 'middleware' => [isAdmin::class], 'as' => 'admin.'], function (): void {
+Route::group(['prefix' => 'dashboard', 'middleware' => [isAdmin::class], 'as' => 'admin.'], function (): void {
     Route::get('/', [AdminController::class, 'getHome'])->name('home');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::prefix('contact-requests')->group(function (): void {
