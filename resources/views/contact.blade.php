@@ -1,7 +1,7 @@
 @extends('layout.master')
 @section('content')
     <!-- breadcrumb-area -->
-    <div class="breadcrumb__area breadcrumb__bg" data-background="{{ url('public/assets/img/bg/breadcrumb_bg.jpg') }}">
+    <div class="breadcrumb__area breadcrumb__bg" data-background="{{ asset('assets/img/bg/breadcrumb_bg.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -29,7 +29,7 @@
                     <div class="contact__info-wrap">
                         <div class="contact__info-item">
                             <div class="contact__info-thumb">
-                                <img src="{{ url('public/assets/img/images/contact_img01.jpg') }}" alt="img">
+                                <img src="{{ asset('assets/img/images/contact_img01.jpg') }}" alt="img">
                             </div>
                             <div class="contact__info-content">
                                 <div class="icon">
@@ -43,7 +43,7 @@
                         </div>
                         <div class="contact__info-item">
                             <div class="contact__info-thumb">
-                                <img src="{{ url('public/assets/img/images/contact_img02.jpg') }}" alt="img">
+                                <img src="{{ asset('assets/img/images/contact_img02.jpg') }}" alt="img">
                             </div>
                             <div class="contact__info-content">
                                 <div class="icon">
@@ -57,7 +57,7 @@
                         </div>
                         <div class="contact__info-item">
                             <div class="contact__info-thumb">
-                                <img src="{{ url('public/assets/img/images/contact_img03.jpg') }}" alt="img">
+                                <img src="{{ asset('assets/img/images/contact_img03.jpg') }}" alt="img">
                             </div>
                             <div class="contact__info-content">
                                 <div class="icon">

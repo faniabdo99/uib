@@ -2,7 +2,7 @@
 @section('content')
 
         <!-- breadcrumb-area -->
-        <div class="breadcrumb__area breadcrumb__bg" data-background="{{ url('public/assets/img/bg/breadcrumb_bg.jpg') }}">
+        <div class="breadcrumb__area breadcrumb__bg" data-background="{{ asset('assets/img/bg/breadcrumb_bg.jpg') }}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -27,7 +27,7 @@
                 <div class="row gutter-24 justify-content-center">
                     <div class="col-xl-7 col-lg-6 col-md-8">
                         <div class="services__thumb-three">
-                            <img src="{{ url('public/assets/img/about/about_01.jpg') }}" alt="img" class="wow img-custom-anim-left animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                            <img src="{{ asset('assets/img/about/about_01.jpg') }}" alt="img" class="wow img-custom-anim-left animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-6">
@@ -52,8 +52,8 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6 col-md-10">
                         <div class="about__img-wrap-two">
-                            <img src="{{ url('public/assets/img/about/wissam-photo.jpg') }}" alt="img" class="wow img-custom-anim-right animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                            <img src="{{ url('public/assets/img/logo/preloader.svg') }}" alt="img" class="wow img-custom-anim-top animated" data-wow-duration="1.5s" data-wow-delay="0.6s">
+                            <img src="{{ asset('assets/img/about/wissam-photo.jpg') }}" alt="img" class="wow img-custom-anim-right animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                            <img src="{{ asset('assets/img/logo/preloader.svg') }}" alt="img" class="wow img-custom-anim-top animated" data-wow-duration="1.5s" data-wow-delay="0.6s">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -75,7 +75,7 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6 col-md-9 order-0 order-lg-2">
                         <div class="about__img-three">
-                            <img src="{{ url('public/assets/img/about/inner_project01.jpg') }}" alt="img" class="wow img-custom-anim-right animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                            <img src="{{ asset('assets/img/about/inner_project01.jpg') }}" alt="img" class="wow img-custom-anim-right animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -97,7 +97,7 @@
                 <div class="row gutter-24 justify-content-center">
                     <div class="col-xl-7 col-lg-6 col-md-8">
                         <div class="services__thumb-three">
-                            <img src="{{ url('public/assets/img/about/about_01.jpg') }}" alt="img" class="wow img-custom-anim-left animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                            <img src="{{ asset('assets/img/about/about_01.jpg') }}" alt="img" class="wow img-custom-anim-left animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-6">

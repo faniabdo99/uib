@@ -4,7 +4,7 @@
 <section class="slider__area-two">
     <div class="swiper slider-active-two">
         <div class="swiper-wrapper">
-            <div class="swiper-slide slider__bg-two" data-background="{{ url('public/assets/img/slider/slider-1.jpg') }}">
+            <div class="swiper-slide slider__bg-two" data-background="{{ asset('assets/img/slider/slider-1.jpg') }}">
                 <div class="container">
                     <div class="row justify-content-end">
                         <div class="col-xl-7 col-lg-7">
@@ -12,16 +12,16 @@
                                 <span class="sub-title">@lang('home.hero_sec_slide_1_sub_title')</span>
                                 <h2 class="title">@lang('home.hero_sec_slide_1_title')</h2>
                                 <div class="slider__btn">
-                                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
+                                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
                                     <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn popup-video">@lang('home.contact_btn')</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider__shape" data-background="{{ url('public/assets/img/slider/slider_shape.png') }}"></div>
+                <div class="slider__shape" data-background="{{ asset('assets/img/slider/slider_shape.png') }}"></div>
             </div>
-            <div class="swiper-slide slider__bg-two" data-background="{{ url('public/assets/img/slider/slider-2.jpg') }}">
+            <div class="swiper-slide slider__bg-two" data-background="{{ asset('assets/img/slider/slider-2.jpg') }}">
                 <div class="container">
                     <div class="row justify-content-end">
                         <div class="col-xl-7 col-lg-7">
@@ -29,21 +29,21 @@
                                 <span class="sub-title">@lang('home.hero_sec_slide_2_sub_title')</span>
                                 <h2 class="title">@lang('home.hero_sec_slide_2_title')</h2>
                                 <div class="slider__btn">
-                                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
+                                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
                                     <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn popup-video">@lang('home.contact_btn')</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider__shape" data-background="{{ url('public/assets/img/slider/slider_shape.png') }}"></div>
+                <div class="slider__shape" data-background="{{ asset('assets/img/slider/slider_shape.png') }}"></div>
             </div>
 
 
         </div>
         <div class="slider__nav">
-            <button class="slider-button-prev"><img src="{{ url('public/assets/img/icons/long_left_arrow.svg') }}" alt="" class="injectable"></button>
-            <button class="slider-button-next"><img src="{{ url('public/assets/img/icons/long_right_arrow.svg') }}" alt="" class="injectable"></button>
+            <button class="slider-button-prev"><img src="{{ asset('assets/img/icons/long_left_arrow.svg') }}" alt="" class="injectable"></button>
+            <button class="slider-button-next"><img src="{{ asset('assets/img/icons/long_right_arrow.svg') }}" alt="" class="injectable"></button>
         </div>
     </div>
 </section>
@@ -54,10 +54,10 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 col-md-9">
                 <div class="about__img-wrap wow img-custom-anim-left animated"  data-wow-duration="1.5s" data-wow-delay="0.1s">
-                    <img src="{{ url('public/assets/img/images/aboutus.jpg') }}" alt="img">
+                    <img src="{{ asset('assets/img/images/aboutus.jpg') }}" alt="img">
                     <div class="about__img-content">
                         <h4 class="title">@lang('home.about_area_sub_title')</h4>
-                        <a href="{{ route('contact') }}" class="btn">@lang('home.contact_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+                        <a href="{{ route('contact') }}" class="btn">@lang('home.contact_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                         <div class="about__customer-box">
                             <h4 class="title">@lang('home.about_area_cta_title')</h4>
                         </div>
-                        <a href="about.html" class="btn btn-two">@lang('home.learn_more_btn')<img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+                        <a href="about.html" class="btn btn-two">@lang('home.learn_more_btn')<img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
                     </div>
                 </div>
             </div>
@@ -97,17 +97,17 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="brand__item">
-                        <img class="small-logo" src="{{ url('public/assets/img/brand/brand_img04.png') }}" alt="img">
+                        <img class="small-logo" src="{{ asset('assets/img/brand/brand_img04.png') }}" alt="img">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand__item">
-                        <img class="small-logo" src="{{ url('public/assets/img/brand/brand_img05.png') }}" alt="img">
+                        <img class="small-logo" src="{{ asset('assets/img/brand/brand_img05.png') }}" alt="img">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand__item">
-                        <img src="{{ url('public/assets/img/brand/brand_img06.png') }}" alt="img">
+                        <img src="{{ asset('assets/img/brand/brand_img06.png') }}" alt="img">
                     </div>
                 </div>
                
@@ -118,7 +118,7 @@
 <!-- brand-area-end -->
 <!-- cta-area -->
 <section class="cta__area cta__area-two fix">
-    <div class="cta__bg" data-background="{{ url('public/assets/img/bg/cta_bg.jpg') }}"></div>
+    <div class="cta__bg" data-background="{{ asset('assets/img/bg/cta_bg.jpg') }}"></div>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7">
@@ -128,14 +128,14 @@
             </div>
             <div class="col-lg-5">
                 <div class="cta__btn">
-                    <a href="{{ route('contact') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+                    <a href="{{ route('contact') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
                     <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn transparent-btn popup-video">@lang('home.contact_btn')</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="cta__shape">
-        <img src="{{ url('public/assets/img/images/cta_shape.png') }}" alt="shape" data-aos="fade-down-left" data-aos-delay="400">
+        <img src="{{ asset('assets/img/images/cta_shape.png') }}" alt="shape" data-aos="fade-down-left" data-aos-delay="400">
     </div>
 </section>
 <!-- cta-area-end -->
@@ -152,7 +152,7 @@
     </div>
     <div class="col-lg-6">
         <div class="section__title view-service-btn mb-60">
-            <a href="{{ route('contact') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+            <a href="{{ route('contact') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
         </div>
     </div>
 </div>
@@ -175,7 +175,7 @@
                     <h2 class="title"><a href="{{ route('services.single', [$Service->id, $Service->slug]) }}">{{ $Service->title }}</a></h2>
                     <p>{{ $Service->description }}</p>
                     <div class="services__btn">
-                        <a href="{{ route('services.single', [$Service->id, $Service->slug]) }}" class="btn">@lang('home.learn_more_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
+                        <a href="{{ route('services.single', [$Service->id, $Service->slug]) }}" class="btn">@lang('home.learn_more_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
                     </div>
                 </div>
             </div>
@@ -188,7 +188,7 @@
 <!-- services-area-end -->
 
 <!-- project-area -->
-<section class="project__area project__bg" data-background="{{ url('public/assets/img/bg/project__bg.jpg') }}">
+<section class="project__area project__bg" data-background="{{ asset('assets/img/bg/project__bg.jpg') }}">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-5 col-lg-6 col-md-8">
@@ -199,7 +199,7 @@
             </div>
             <div class="col-lg-6 col-md-4">
                 <div class="section__title Project-section mb-60">
-                    <a href="{{ route('projects') }}" class="btn btn-two">@lang('home.view_projects_btn') <img src="{{ url('public/assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+                    <a href="{{ route('projects') }}" class="btn btn-two">@lang('home.view_projects_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
                     <div class="project__nav">
                         <button class="project-button-prev"><i class="renova-left-arrow"></i></button>
                         <button class="project-button-next"><i class="renova-right-arrow"></i></button>
@@ -246,7 +246,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 col-md-10">
                 <div class="faq__img wow img-custom-anim-left animated"  data-wow-duration="1.5s" data-wow-delay="0.1s">
-                    <img src="{{ url('public/assets/img/images/faq_img.jpg') }}" alt="img">
+                    <img src="{{ asset('assets/img/images/faq_img.jpg') }}" alt="img">
                     <div class="faq__img-content">
                         <h5 class="title">@lang('home.faq_area_sub_title')</h5>
                     </div>
@@ -330,7 +330,7 @@
                     <h2 class="title">@lang('home.consultation_area_title')</h2>
                 </div>
                 <div class="consultation__img img-custom-anim-right animated" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                    <img src="{{ url('public/assets/img/images/history_img01.jpg') }}" alt="img" class="wow">
+                    <img src="{{ asset('assets/img/images/history_img01.jpg') }}" alt="img" class="wow">
                 </div>
             </div>
             <div class="col-lg-5">
