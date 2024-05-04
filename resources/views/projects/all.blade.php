@@ -1,18 +1,18 @@
 @extends('layout.master')
 @section('content')
     <!-- breadcrumb-area -->
-    <div class="breadcrumb__area breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
+    <div class="breadcrumb__area breadcrumb__bg" data-background="{{ asset('assets/img/bg/breadcrumb_bg.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__content">
-                        <h2 class="title">Our Projects</h2>
+                        <h2 class="title">@lang('projects.projects_title')</h2>
                         <nav class="breadcrumb">
                             <span property="itemListElement" typeof="ListItem">
-                                <a href="{{ route('home') }}">Home</a>
+                                <a href="{{ route('home') }}">@lang('proejcts.home')</a>
                             </span>
                             <span class="breadcrumb-separator">/</span>
-                            <span property="itemListElement" typeof="ListItem">Our Projects</span>
+                            <span property="itemListElement" typeof="ListItem">@lang('projects.projects_title')</span>
                         </nav>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="project__menu-nav">
-                        <button class="active" data-filter="*">ALL WORKS</button>
+                        <button class="active" data-filter="*">@lang('projects.all_works')</button>
                         @forelse($Categories as $Category)
                             <button class="" data-filter=".{{ $Category->id }}">{{ $Category->title }}</button>
                         @empty
@@ -45,7 +45,7 @@
                             </div>
                             <div class="project__content-two">
                                 <h2 class="title"><a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}">{{ $Project->title }}</a></h2>
-                                <span>{{ $Project->date->format('F Y') }}</span>
+                                <span>{{ $Project->created_at->format('F Y') }}</span>
                             </div>
                             <div class="project__icon-two">
                                 <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><i class="renova-plus"></i></a>

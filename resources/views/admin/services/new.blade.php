@@ -11,11 +11,15 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-form">
-                            <form action="{{ route('admin.service.postNew') }}" enctype="multipart/form-data" method="POST">
+                            <form action="{{ route('admin.services.postNew') }}" enctype="multipart/form-data" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label class="col-form-label">Title</label>
                                     <input name="title" type="text" class="form-control" required >
+                                </div>
+                                <div class="form-grop">
+                                    <label class="col-form-label">Description</label>
+                                    <textarea name="description" class="form-control" cols="20" rows="10" maxlength="255" required></textarea>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -33,6 +37,13 @@
                                 <div class="form-group">
                                     <label class="col-form-label">Lower Content:</label>
                                     <textarea name="lower_content" class="editor" cols="30" rows="10"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Language <span class="text-danger">*</span></label>
+                                    <select class="form-control" name="lang" required>
+                                        <option value="ar">Arabic</option>
+                                        <option value="en">English</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <input type="checkbox" class="mr-2" name="is_featured">

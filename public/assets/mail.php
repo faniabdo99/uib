@@ -2,7 +2,7 @@
 
 // Only process POST reqeusts.
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ('POST' === $_SERVER['REQUEST_METHOD']) {
 
     // Get the form fields and remove MORALspace.
 
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Check that data was sent to the mailer.
 
-    if (empty($name) or empty($phone) or empty($subject) or empty($message) or ! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (empty($name) || empty($phone) || empty($subject) || empty($message) || ! filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
         // Set a 400 (bad request) response code and exit.
 
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Set the email subject.
 
-    $sender = "New contact from $name";
+    $sender = "New contact from {$name}";
 
     //Email Header
 
@@ -46,19 +46,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Build the email content.
 
-    $email_content = "$head\n\n\n";
+    $email_content = "{$head}\n\n\n";
 
-    $email_content .= "Name: $name\n";
+    $email_content .= "Name: {$name}\n";
 
-    $email_content .= "Email: $email\n\n";
+    $email_content .= "Email: {$email}\n\n";
 
-    $email_content .= "Subject: $subject\n\n";
+    $email_content .= "Subject: {$subject}\n\n";
 
-    $email_content .= "Message:\n$message\n";
+    $email_content .= "Message:\n{$message}\n";
 
     // Build the email headers.
 
-    $email_headers = "From: $name <$email>";
+    $email_headers = "From: {$name} <{$email}>";
 
     // Send the email.
 

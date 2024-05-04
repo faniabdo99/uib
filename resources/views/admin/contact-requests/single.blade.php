@@ -12,8 +12,10 @@
                                 <li>From: {{ $ContactRequest->name }}</li>
                                 <li>Email: <a href="mailto:{{ $ContactRequest->email }}">{{ $ContactRequest->email }}</a></li>
                                 <li>Phone Number: {{ $ContactRequest->phone_number }}</li>
-                                @if($ContactRequest->service)
-                                    <li>Related Service: {{ $ContactRequest->email }}</li>
+                                @if($ContactRequest->Service)
+                                    <li>Related Service: {{ $ContactRequest->Service->title }}</li>
+                                @else
+                                    <li>Service: No related service</li>
                                 @endif
                                 <li>Date: {{ $ContactRequest->created_at->format('Y-m-d h:i A') }}</li>
                             </ul>

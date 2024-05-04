@@ -17,6 +17,10 @@
                                     <label class="col-form-label">Title</label>
                                     <input name="title" type="text" class="form-control" value="{{ $Service->title }}" required >
                                 </div>
+                                <div class="form-grop">
+                                    <label class="col-form-label">Description</label>
+                                    <textarea name="description" class="form-control" cols="20" rows="10" maxlength="255" required>{{ $Service->description }}</textarea>
+                                </div>
                                 <img src="{{ $Service->imagePath }}" style="height: 150px;width: auto;">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -34,6 +38,13 @@
                                 <div class="form-group">
                                     <label class="col-form-label">Lower Content:</label>
                                     <textarea name="lower_content" class="editor" cols="30" rows="10">{!! $Service->lower_content !!}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Language <span class="text-danger">*</span></label>
+                                    <select class="form-control" name="lang" required>
+                                        <option @if($Service->lang == 'ar') selected @endif  value="ar">Arabic</option>
+                                        <option @if($Service->lang == 'en') selected @endif value="en">English</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <input type="checkbox" @if($Service->is_featured) checked @endif class="mr-2" name="is_featured">

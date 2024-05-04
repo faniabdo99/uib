@@ -104,6 +104,25 @@
                     <li>
 						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-television"></i>
+							<span class="nav-text">Contact Requests</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('admin.contactRequests.all') }}">All Requests</a></li>
+                        </ul>
+                    </li>
+                    <li>
+						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-television"></i>
+							<span class="nav-text">Blog</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('admin.blogs.all') }}">All Articles</a></li>
+                            <li><a href="{{ route('admin.blogs.getNew') }}">Add New</a></li>
+                        </ul>
+                    </li>
+                    <li>
+						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-television"></i>
 							<span class="nav-text">Services</span>
 						</a>
                         <ul aria-expanded="false">

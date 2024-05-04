@@ -21,6 +21,7 @@
                                         <th>Source</th>
                                         <th>Message</th>
                                         <th>Date</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -33,7 +34,8 @@
                                             <td>{{ $ContactRequest->Service->title ?? 'No Service' }}</td>
                                             <td>{{ $ContactRequest->source }}</td>
                                             <td>{{ $ContactRequest->shortMessage }}</td>
-                                            <td>{{ $ContactRequest->created_at->format('Y-m-d h:i A') }}</td>											
+                                            <td>{{ $ContactRequest->created_at->format('Y-m-d h:i A') }}</td>
+                                            <td><a class="btn btn-sm" href="{{ route('admin.contactRequests.single' , $ContactRequest->id) }}">Details</a></td>										
                                         </tr>
                                     @empty
                                     @endforelse
@@ -49,6 +51,6 @@
 @endsection
 @section('external_scripts')
     <!-- Datatable -->
-    <script src="{{ asset('admin/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('admin/js/plugins-init/datatables.init.js') }}"></script>
+    <script src="{{ url('public/admin/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ url('public/admin/js/plugins-init/datatables.init.js') }}"></script>
 @endsection
