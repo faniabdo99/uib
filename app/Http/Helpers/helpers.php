@@ -3,9 +3,9 @@
 use App\Models\Service;
 
 function getServices() {
-    return Service::latest()->get();
+    return Service::Language()->latest()->get();
 }
 
 function getFeaturedServices($Count) {
-    return Service::featured()->limit($Count)->get();
+    return Service::Language()->featured()->limit($Count)->get();
 }
