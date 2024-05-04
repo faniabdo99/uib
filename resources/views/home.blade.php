@@ -38,6 +38,23 @@
                 </div>
                 <div class="slider__shape" data-background="{{ asset('assets/img/slider/slider_shape.png') }}"></div>
             </div>
+            <div class="swiper-slide slider__bg-two" data-background="{{ asset('assets/img/slider/slider-2.jpg') }}">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="slider__content-two">
+                                <span class="sub-title">@lang('home.hero_sec_slide_3_sub_title')</span>
+                                <h2 class="title">@lang('home.hero_sec_slide_3_title')</h2>
+                                <div class="slider__btn">
+                                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
+                                    <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn popup-video">@lang('home.contact_btn')</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__shape" data-background="{{ asset('assets/img/slider/slider_shape.png') }}"></div>
+            </div>
 
 
         </div>
