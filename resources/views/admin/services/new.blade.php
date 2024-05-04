@@ -19,7 +19,7 @@
                                 </div>
                                 <div class="form-grop">
                                     <label class="col-form-label">Description</label>
-                                    <textarea name="description" class="form-control" cols="20" rows="10" required></textarea>
+                                    <textarea name="description" class="form-control" cols="20" rows="10" maxlength="255" required></textarea>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">

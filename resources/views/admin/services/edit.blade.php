@@ -19,7 +19,7 @@
                                 </div>
                                 <div class="form-grop">
                                     <label class="col-form-label">Description</label>
-                                    <textarea name="description" class="form-control" cols="20" rows="10" required>{{ $Service->description }}</textarea>
+                                    <textarea name="description" class="form-control" cols="20" rows="10" maxlength="255" required>{{ $Service->description }}</textarea>
                                 </div>
                                 <img src="{{ $Service->imagePath }}" style="height: 150px;width: auto;">
                                 <div class="input-group mb-3">
