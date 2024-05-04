@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea name="description" class="form-control" cols="30" rows="10" required>{{ $Blog->description }}</textarea>
+                                    <textarea name="description" class="form-control" cols="30" rows="10" maxlength="255" required>{{ $Blog->description }}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Content:</label>

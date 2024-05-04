@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="from-group">
                                     <label class="col-form-label">Description</label>
-                                    <textarea name="description" class="form-control" cols="30" rows="10" required></textarea>
+                                    <textarea name="description" class="form-control" cols="30" rows="10" maxlength="255" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Content:</label>
