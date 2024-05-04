@@ -11,7 +11,5 @@ return [
     'office_address' => 'عنوان المكاتب',
     'office_location' => 'سويسرا، <br> جنيف',
     'phone_number' => 'رقم الهاتف',
-    'email_address' => 'البريد الالكتروني',
-    'main_pages' => 'Main Pages',
-    'footer_content' => 'Our company was founded on the idea of helping those doing business between China, Middle East, and EU.',
+    'email_address' => 'البريد الالكتروني'
 ];
