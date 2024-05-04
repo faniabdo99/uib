@@ -63,8 +63,8 @@
                     @endforelse
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    @forelse($Service->SubServices as $SubService)
-                        <div class="tab-pane fade show active" id="{{ $SubService->id }}" role="tabpanel" aria-labelledby="expertise-tab" tabindex="0">
+                    @forelse($Service->SubServices as $key => $SubService)
+                        <div class="tab-pane fade show @if($key == 0) active @endif" id="{{ $SubService->id }}" role="tabpanel" aria-labelledby="expertise-tab" tabindex="0">
                             <div class="choose__item shine__animate-item">
                                 <div class="choose__item-thumb shine__animate-link">
                                     <img src="{{ $SubService->imagePath }}" alt="{{ $SubService->title }}">
