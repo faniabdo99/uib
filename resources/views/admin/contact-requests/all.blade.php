@@ -21,6 +21,7 @@
                                         <th>Source</th>
                                         <th>Message</th>
                                         <th>Date</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -33,7 +34,8 @@
                                             <td>{{ $ContactRequest->Service->title ?? 'No Service' }}</td>
                                             <td>{{ $ContactRequest->source }}</td>
                                             <td>{{ $ContactRequest->shortMessage }}</td>
-                                            <td>{{ $ContactRequest->created_at->format('Y-m-d h:i A') }}</td>											
+                                            <td>{{ $ContactRequest->created_at->format('Y-m-d h:i A') }}</td>
+                                            <td><a class="btn btn-sm" href="{{ route('admin.contactRequests.single' , $ContactRequest->id) }}">Details</a></td>										
                                         </tr>
                                     @empty
                                     @endforelse
