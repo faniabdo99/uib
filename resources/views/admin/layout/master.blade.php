@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>UIB - Admin Panel</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('public/admin/images/favicon.png') }}">
-	<link rel="stylesheet" href="{{ url('public/admin/vendor/chartist/css/chartist.min.css') }}">
-    <link href="{{ url('public/admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
-	<link href="{{ url('public/admin/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
-    <link href="{{ url('public/admin/css/style.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin/images/favicon.png') }}">
+	<link rel="stylesheet" href="{{ asset('admin/vendor/chartist/css/chartist.min.css') }}">
+    <link href="{{ asset('admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('admin/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -39,9 +39,9 @@
         ***********************************-->
         <div class="nav-header">
             <a href="{{ route('admin.home') }}" class="brand-logo">
-                <img class="logo-abbr" src="{{ url('public/admin/images/logo.png') }}" alt="">
-                <img class="logo-compact" src="{{ url('public/admin/images/logo-text.png') }}" alt="">
-                <img class="brand-title" src="{{ url('public/admin/images/logo-text.png') }}" alt="">
+                <img class="logo-abbr" src="{{ asset('admin/images/logo.png') }}" alt="">
+                <img class="logo-compact" src="{{ asset('admin/images/logo-text.png') }}" alt="">
+                <img class="brand-title" src="{{ asset('admin/images/logo-text.png') }}" alt="">
             </a>
 
             <div class="nav-control">
@@ -199,21 +199,21 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-    <script src="{{ url('public/admin/vendor/global/global.min.js') }}"></script>
-	<script src="{{ url('public/admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
-	<script src="{{ url('public/admin/vendor/chart.js/Chart.bundle.min.js') }}"></script>
-    <script src="{{ url('public/admin/js/custom.min.js') }}"></script>
-	<script src="{{ url('public/admin/js/deznav-init.js') }}"></script>
-	<script src="{{ url('public/admin/vendor/owl-carousel/owl.carousel.js') }}"></script>
+    <script src="{{ asset('admin/vendor/global/global.min.js') }}"></script>
+	<script src="{{ asset('admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+	<script src="{{ asset('admin/vendor/chart.js/Chart.bundle.min.js') }}"></script>
+    <script src="{{ asset('admin/js/custom.min.js') }}"></script>
+	<script src="{{ asset('admin/js/deznav-init.js') }}"></script>
+	<script src="{{ asset('admin/vendor/owl-carousel/owl.carousel.js') }}"></script>
 	
 	<!-- Chart piety plugin files -->
-    <script src="{{ url('public/admin/vendor/peity/jquery.peity.min.js') }}"></script>
+    <script src="{{ asset('admin/vendor/peity/jquery.peity.min.js') }}"></script>
 	
 	<!-- Apex Chart -->
-	<script src="{{ url('public/admin/vendor/apexchart/apexchart.js') }}"></script>
+	<script src="{{ asset('admin/vendor/apexchart/apexchart.js') }}"></script>
 	
 	<!-- Dashboard 1 -->
-	<script src="{{ url('public/admin/js/dashboard/dashboard-1.js') }}"></script>
+	<script src="{{ asset('admin/js/dashboard/dashboard-1.js') }}"></script>
 	@yield('external_scripts')
 </body>
 </html>
