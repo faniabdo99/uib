@@ -86,7 +86,7 @@
             url: "{{ route('admin.projects.uploadGallery' , $Project->id) }}",
             method: 'POST',
             paramName: 'file',
-            params: {'_token':"{{ csrf_token() }}"}
+            params: {'_token':"{{ csrf_token() }}"},
             maxFilesize: 10,
             maxFiles: 5,
             acceptedFiles: 'image/*'
