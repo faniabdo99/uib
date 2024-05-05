@@ -10,6 +10,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SubServiceController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Middleware\isAdmin;
 use Illuminate\Support\Facades\Route;
 
@@ -83,3 +84,4 @@ Route::group(['prefix' => 'dashboard', 'middleware' => [isAdmin::class], 'as' =>
     });
 });
 Route::post('api/upload/{project}', [ProjectController::class, 'uploadGallery'])->name('admin.projects.uploadGallery');
+Route::get('sitemap.xml', [SitemapController::class, 'sitemap']);
