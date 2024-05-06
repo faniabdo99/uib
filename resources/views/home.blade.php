@@ -13,7 +13,7 @@
                                 <h2 class="title">@lang('home.hero_sec_slide_1_title')</h2>
                                 <div class="slider__btn">
                                     <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
-                                    <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn popup-video">@lang('home.contact_btn')</a>
+                                    <a href="{{ route('c') }} class="btn popup-video">@lang('home.contact_btn')</a>
                                 </div>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                                 <h2 class="title">@lang('home.hero_sec_slide_2_title')</h2>
                                 <div class="slider__btn">
                                     <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
-                                    <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn popup-video">@lang('home.contact_btn')</a>
+                                    <a href="{{ route('contact') }}" class="btn popup-video">@lang('home.contact_btn')</a>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                                 <h2 class="title">@lang('home.hero_sec_slide_3_title')</h2>
                                 <div class="slider__btn">
                                     <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
-                                    <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn popup-video">@lang('home.contact_btn')</a>
+                                    <a href="{{ route('contact') }}" class="btn popup-video">@lang('home.contact_btn')</a>
                                 </div>
                             </div>
                         </div>
@@ -145,8 +145,8 @@
             </div>
             <div class="col-lg-5">
                 <div class="cta__btn">
-                    <a href="{{ route('contact') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
-                    <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" class="btn transparent-btn popup-video">@lang('home.contact_btn')</a>
+                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+                    <a href="{{ route('contact') }}" class="btn transparent-btn popup-video">@lang('home.contact_btn')</a>
                 </div>
             </div>
         </div>
