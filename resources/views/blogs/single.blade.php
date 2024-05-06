@@ -1,4 +1,7 @@
-@extends('layout.master')
+@extends('layout.master', [
+    'PageTitle' => $Blog->title,
+    'PageDescription' => $Blog->description
+])
 @section('content')
     <!-- blog-details-area -->
     <section class="blog__details-area section-py-120">

@@ -86,6 +86,10 @@
             url: "{{ route('admin.projects.uploadGallery' , $nextProjectId) }}",
             method: 'POST',
             paramName: 'file',
+            params: {'_token':"{{ csrf_token() }}"},
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
             maxFilesize: 10,
             maxFiles: 5,
             acceptedFiles: 'image/*'

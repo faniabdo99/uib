@@ -1,4 +1,6 @@
-@extends('layout.master')
+@extends('layout.master', [
+    'PageTitle' => __('about.about_title')
+])
 @section('content')
 
         <!-- breadcrumb-area -->

@@ -60,8 +60,8 @@
                                 <div class="form-group">
                                     <label class="form-control-label">Language <span class="text-danger">*</span></label>
                                     <select class="form-control" name="lang" required>
-                                        <option @if($Blog->lang == 'ar') selected @endif  value="ar">Arabic</option>
-                                        <option @if($Blog->lang == 'en') selected @endif value="en">English</option>
+                                        <option @if($Project->lang == 'ar') selected @endif  value="ar">Arabic</option>
+                                        <option @if($Project->lang == 'en') selected @endif value="en">English</option>
                                     </select>
                                 </div>
                                 <button class="btn btn-primary">Submit</button>
@@ -86,6 +86,10 @@
             url: "{{ route('admin.projects.uploadGallery' , $Project->id) }}",
             method: 'POST',
             paramName: 'file',
+            params: {'_token':"{{ csrf_token() }}"},
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
             maxFilesize: 10,
             maxFiles: 5,
             acceptedFiles: 'image/*'

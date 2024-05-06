@@ -1,4 +1,7 @@
-@extends('layout.master')
+@extends('layout.master', [
+    'PageTitle' => $Service->title,
+    'PageDescription' => $Service->description
+])
 @section('content')
     <!-- breadcrumb-area -->
     <div class="breadcrumb__area breadcrumb__bg" data-background="{{ $Service->imagePath }}">
@@ -55,16 +58,16 @@
             </div>
             <div class="choose__tab-wrap">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    @forelse($Service->SubServices as $SubService)
+                    @forelse($Service->SubServices as $key => $SubService)
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="{{ $SubService->id }}" data-bs-toggle="tab" data-bs-target="#{{ $SubService->id }}" type="button" role="tab" aria-controls="{{ $SubService->id }}" aria-selected="true">{{ $SubService->title }}</button>
+                            <button class="nav-link @if($key == 0) active @endif" id="service-{{ $SubService->id }}-button" data-bs-toggle="tab" data-bs-target="#service-{{ $SubService->id }}" type="button" role="tab" aria-controls="service-{{ $SubService->id }}" aria-selected="true">{{ $SubService->title }}</button>
                         </li>
                     @empty
                     @endforelse
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     @forelse($Service->SubServices as $key => $SubService)
-                        <div class="tab-pane fade show @if($key == 0) active @endif" id="{{ $SubService->id }}" role="tabpanel" aria-labelledby="expertise-tab" tabindex="0">
+                        <div class="tab-pane fade @if($key == 0) show active @endif" id="service-{{ $SubService->id }}" role="tabpanel" aria-labelledby="expertise-tab" tabindex="0">
                             <div class="choose__item shine__animate-item">
                                 <div class="choose__item-thumb shine__animate-link">
                                     <img src="{{ $SubService->imagePath }}" alt="{{ $SubService->title }}">

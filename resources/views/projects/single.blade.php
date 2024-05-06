@@ -1,4 +1,6 @@
-@extends('layout.master')
+@extends('layout.master', [
+    'PageTitle' => $Project->title
+])
 @section('content')
     <!-- breadcrumb-area -->
     <div class="breadcrumb__area breadcrumb__bg" data-background="{{ $Project->imagePath }}">

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>UIB - United International Business</title>
-    <meta name="description" content="UIB Swiss - United International Business GmbH">
+    <title>UIB SWISS GMBH - {{ $PageTitle ?? 'United International Business' }}</title>
+    <meta name="description" content="{{ $PageDescription ?? 'UIB Swiss - United International Business GmbH' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}">
     <!-- CSS here -->
@@ -27,11 +27,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT6JSE6ELT"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-LT6JSE6ELT');
+        gtag('config', 'G-LT6JSE6ELT');
     </script>
 </head>
 <body>

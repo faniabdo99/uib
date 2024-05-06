@@ -1,4 +1,6 @@
-@extends('layout.master')
+@extends('layout.master', [
+    'PageTitle' => __('projects.projects_title')
+])
 @section('content')
     <!-- breadcrumb-area -->
     <div class="breadcrumb__area breadcrumb__bg" data-background="{{ asset('assets/img/bg/breadcrumb_bg.jpg') }}">
@@ -27,9 +29,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="project__menu-nav">
-                        <button class="active" data-filter="*">@lang('projects.all_works')</button>
-                        @forelse($Categories as $Category)
-                            <button class="" data-filter=".{{ $Category->id }}">{{ $Category->title }}</button>
+                        @forelse($Categories as $key => $Category)
+                            <button class="@if($key == 0) active @endif" data-filter=".{{ $Category->id }}">{{ $Category->title }}</button>
                         @empty
                         @endforelse
                     </div>
