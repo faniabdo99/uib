@@ -12,19 +12,19 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/fontello.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/default-icons.css">
-    <link rel="stylesheet" href="assets/css/default.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
-    <link rel="stylesheet" href="assets/css/tg-cursor.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="../../public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/assets/css/animate.min.css">
+    <link rel="stylesheet" href="../../public/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../public/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../public/assets/css/fontello.css">
+    <link rel="stylesheet" href="../../public/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../public/assets/css/default-icons.css">
+    <link rel="stylesheet" href="../../public/assets/css/default.css">
+    <link rel="stylesheet" href="../../public/assets/css/odometer.css">
+    <link rel="stylesheet" href="../../public/assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="../../public/assets/css/aos.css">
+    <link rel="stylesheet" href="../../public/assets/css/tg-cursor.css">
+    <link rel="stylesheet" href="../../public/assets/css/main.css">
 
 </head>
 
@@ -325,7 +325,9 @@
                                 <h2 class="title">Schedule a Free consultation Meeting
                                 </h2>
                             </div>
-                            <form id="contact-form" action="assets/mail.php" method="post" class="contact__form">
+                            <div id="example3">
+                            <form id="contact-form"  method="post" class="contact__form" >
+                                
                                 <div class="row gutter-20">
                                     <div class="col-md-6">
                                         <div class="form-grp">
@@ -360,10 +362,23 @@
                                 <div class="form-grp">
                                     <textarea name="message" placeholder="Type Your Message"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-two">Send Message</button>
+                                <button type="submit" onclick="ReplaceForm()" class="btn btn-two">Send Message</button>
                                 <p class="ajax-response mb-0"></p>
                             </form>
                         </div>
+                            <div id="for_replacement" style="display:none;">
+                                <p>
+                                <b>This replaces the form when the button is clicked.</b>
+                                <br>(This visual example does not submit. A real form would.)
+                                </div>
+
+
+                           
+                               
+                                
+                                
+                                
+                                
                     </div>
                 </div>
             </div>
@@ -488,26 +503,35 @@
 
 
     <!-- JS here -->
-    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.odometer.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/jquery.marquee.min.js"></script>
-    <script src="assets/js/tg-cursor.min.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/svg-inject.min.js"></script>
-    <script src="assets/js/tween-max.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="../../public/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../../public/assets/js/bootstrap.min.js"></script>
+    <script src="../../public/assets/js/isotope.pkgd.min.js"></script>
+    <script src="../../public/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../../public/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../../public/assets/js/jquery.odometer.min.js"></script>
+    <script src="../../public/assets/js/jquery.appear.js"></script>
+    <script src="../../public/assets/js/swiper-bundle.min.js"></script>
+    <script src="../../public/assets/js/jquery.marquee.min.js"></script>
+    <script src="../../public/assets/js/tg-cursor.min.js"></script>
+    <script src="../../public/assets/js/ajax-form.js"></script>
+    <script src="../../public/assets/js/jquery-ui.min.js"></script>
+    <script src="../../public/assets/js/svg-inject.min.js"></script>
+    <script src="../../public/assets/js/tween-max.min.js"></script>
+    <script src="../../public/assets/js/wow.min.js"></script>
+    <script src="../../public/assets/js/aos.js"></script>
+    <script src="../../public/assets/js/main.js"></script>
     <script>
         SVGInject(document.querySelectorAll("img.injectable"));
     </script>
+    <script type="text/javascript">
+        function ReplaceForm() {
+        let IDofForm = "contact-form";
+        let IDofDivWithForm = "example3";
+        let IDforReplacement = "for_replacement";
+        document.getElementById(IDofForm).submit();
+        document.getElementById(IDofDivWithForm).innerHTML = document.getElementById(IDforReplacement).innerHTML;
+        }
+        </script>
 </body>
 
 </html>
