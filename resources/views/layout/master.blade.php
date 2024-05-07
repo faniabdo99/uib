@@ -58,17 +58,15 @@
                             <div class="tg-header__top-menu">
                                 <ul class="list-wrap">
                                     <li><a href="{{ route('contact') }}">info@uibswiss.ch</a></li>
-                                    <li><a href="{{ route('contact') }}">+1 234 56789</a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="tg-header__top-social">
                                 <ul class="list-wrap">
-                                    <li><a href="https://www.facebook.com/" target="_blank">FB</a></li>
-                                    <li><a href="https://twitter.com/home" target="_blank">TW</a></li>
-                                    <li><a href="https://www.linkedin.com/" target="_blank">LI</a></li>
-                                    <li><a href="https://www.instagram.com/" target="_blank">IN</a></li>
+                                  
+                                   <li><a href="{{ route('contact') }}">+41 78 950 45 55</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -217,8 +215,8 @@
                     </div>
                     <div class="contact-list mb-30">
                         <h4>@lang('navbar.phone_number')</h4>
-                        <p>+1 1234 567</p>
-                        <p>+1 1234 567</p>
+                        <p>+41 78 950 45 55</p>
+                        <p>+41 78 950 45 55</p>
                     </div>
                     <div class="contact-list mb-30">
                         <h4>@lang('navbar.email_address')</h4>

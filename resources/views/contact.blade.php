@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="content">
                                     <span>@lang('contact.call')</span>
-                                    <h2 class="title"><a href="tel:0123456789">+12 345 6789</a></h2>
+                                    <h2 class="title"><a href="tel:0041789504555">+41789504555</a></h2>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                 <div class="col-lg-8">
                     <!-- contact-map -->
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22090.250791659444!2d6.16359545182695!3d46.20485785896012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c650693d0e2eb%3A0xa0b695357b0bbc39!2z2KzZhtmK2YHYjCDYs9mI2YrYs9ix2Kc!5e0!3m2!1sar!2siq!4v1712383983341!5m2!1sar!2siq" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2696.3960861991773!2d8.942548784373768!3d47.482196779176626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDfCsDI4JzU1LjkiTiA4wrA1NicyNS4zIkU!5e0!3m2!1sar!2siq!4v1715031929144!5m2!1sar!2siq" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <!-- contact-map-end -->
                     <div class="contact__form-wrap">

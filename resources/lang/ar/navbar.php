@@ -9,7 +9,8 @@ return [
     'contact_us' => 'تواصل معنا',
     'get_in_touch' => 'لنبقى على اتصال',
     'office_address' => 'عنوان المكاتب',
-    'office_location' => 'سويسرا، <br> جنيف',
+    'office_location' => 'ادورف ستراسه5,<br>9546,توفييل,تورگاو<br> 
+سويسرا',
     'phone_number' => 'رقم الهاتف',
     'email_address' => 'البريد الالكتروني'
 ];

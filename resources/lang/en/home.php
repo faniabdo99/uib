@@ -1,13 +1,13 @@
 <?php
 return [
     'hero_sec_slide_1_sub_title' => 'We\'re Working Since 2016 in the this Field',
-    'hero_sec_slide_1_title' => 'Your Partner In Iraq',
+    'hero_sec_slide_1_title' => 'Your Swiss <br>Partner In Iraq',
     'hero_sec_slide_2_sub_title' => 'We\'re Working Since 2016 in the this Field',
-    'hero_sec_slide_2_title' => 'Your Partner In China',
+    'hero_sec_slide_2_title' => 'Your Swiss Partner <br>In China',
     'hero_sec_slide_3_sub_title' => 'We\'re Working Since 2016 in the this Field',
-    'hero_sec_slide_3_title' => 'Your Partner In Switzerland',
+    'hero_sec_slide_3_title' => 'Your Partner <br>In Switzerland',
     'about_area_sub_title' => 'Let’s work together',
-    'about_area_title' => 'UIB SWISS GMBH FOUNDED IN SWITZERLAND, TG IN 2016',
+    'about_area_title' => 'Untitled International Business GMBH FOUNDED IN SWITZERLAND, TG IN 2016',
     'about_area_text' => 'our company was founded on the idea of helping those doing business between China, Middle East, and EU. Since our company was established, we have endeavored to provide your company with the services necessary for your business to succeed internationally. We advise and support global companies that are leaders in their industries.
     In UIB SWISS GmbH we counsel our clients on their key strategic issues, leveraging our deep industry expertise and using analytical rigor to help them make informed decisions more quickly and solve their toughest and most critical business problems.',
     'about_area_cta_title' => 'Know Us More',
@@ -39,7 +39,7 @@ return [
     'submit_form' => 'Get your free quote',
     'blog_area_sub_title' => 'Our BLog Posts',
     'blog_area_title' => 'Latest Articles',
-    'blog_area_description' => 'Sociis dapibus imperdiet sapien vehicula risus nec odio ultrices, pharetra tristique ultricies dui augue litora semper conubia, sodales felis aliquam.',
+    'blog_area_description' => 'Stay Ahead with the Latest Insights',
     'all_blogs_btn' => 'View All Posts',
     'blog_cta' => 'Read Details',
     'contact_btn' => 'Contact Us Now',

@@ -2,14 +2,14 @@
 
 return [
     'hero_sec_slide_1_sub_title' => 'نحن نعمل منذ عام 2016 في هذا المجال',
-    'hero_sec_slide_1_title' => 'شريككم في العراق',
+    'hero_sec_slide_1_title' => 'شريككم  السويسري في العراق',
     'hero_sec_slide_2_sub_title' => 'نحن نعمل منذ عام 2016 في هذا المجال',
-    'hero_sec_slide_2_title' => 'شريككم في الصين',
+    'hero_sec_slide_2_title' => 'شريككم السويسري في الصين',
     'hero_sec_slide_3_sub_title' => 'نحن نعمل منذ عام 2016 في هذا المجال',
     'hero_sec_slide_3_title' => 'شريككم في سويسرا',
 
     'about_area_sub_title' => 'فلنعمل معًا',
-    'about_area_title' => 'تأسست شركة UIB SWISS GMBH في سويسرا، TG في عام 2016',
+    'about_area_title' => 'تأسست شركة Untitled International Business GMBH في سويسرا، TG في عام 2016',
     'about_area_text' => 'تأسست شركتنا على فكرة مساعدة أولئك الذين يقومون بالأعمال التجارية بين الصين والشرق الأوسط والاتحاد الأوروبي. منذ تأسيس شركتنا، سعينا جاهدين إلى تزويد شركتك بالخدمات اللازمة لنجاح أعمالك على المستوى الدولي. نحن نقدم المشورة والدعم للشركات العالمية الرائدة في صناعاتها.
     في UIB SWISS GmbH، نقدم المشورة لعملائنا بشأن قضاياهم الإستراتيجية الرئيسية، مع الاستفادة من خبرتنا العميقة في الصناعة واستخدام الدقة التحليلية لمساعدتهم على اتخاذ قرارات مستنيرة بسرعة أكبر وحل مشكلاتهم التجارية الأكثر صعوبة والأكثر أهمية.',
     'about_area_cta_title' => 'تعرف علينا',
@@ -48,7 +48,7 @@ return [
 
     'blog_area_sub_title' => 'منشورات مدونتنا',
     'blog_area_title' => 'اخر الاخبار',
-    'blog_area_description' => 'Sociis dapibus imperdiet sapien vehicula risus nec odio ultrices, pharetra tristique ultricies dui augue litora semper conubia, sodales felis aliquam.',
+    'blog_area_description' => 'بوابتك للحصول على المعلومات الحديثة',
     'all_blogs_btn' => 'عرض جميع الاخبار',
     'blog_cta' => 'اقرأ التفاصيل',
     'contact_btn' => 'اتصل بنا الآن',

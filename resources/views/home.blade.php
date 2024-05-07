@@ -13,7 +13,7 @@
                                 <h2 class="title">@lang('home.hero_sec_slide_1_title')</h2>
                                 <div class="slider__btn">
                                     <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
-                                    <a href="{{ route('c') }} class="btn popup-video">@lang('home.contact_btn')</a>
+                                    <a href="{{ route('contact') }}" class="btn popup-video">@lang('home.contact_btn')</a>
                                 </div>
                             </div>
                         </div>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="slider__shape" data-background="{{ asset('assets/img/slider/slider_shape.png') }}"></div>
             </div>
-            <div class="swiper-slide slider__bg-two" data-background="{{ asset('assets/img/slider/slider-2.jpg') }}">
+            <div class="swiper-slide slider__bg-two" data-background="{{ asset('assets/img/slider/slider-3.jpg') }}">
                 <div class="container">
                     <div class="row justify-content-end">
                         <div class="col-xl-7 col-lg-7">
@@ -151,9 +151,7 @@
             </div>
         </div>
     </div>
-    <div class="cta__shape">
-        <img src="{{ asset('assets/img/images/cta_shape.png') }}" alt="shape" data-aos="fade-down-left" data-aos-delay="400">
-    </div>
+   
 </section>
 <!-- cta-area-end -->
 

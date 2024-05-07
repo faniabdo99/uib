@@ -4,7 +4,9 @@ return [
     'contact_title' => 'Contact Us',
     'home' => 'Home',
     'location_title' => 'Location',
-    'location' => 'Swissra, Geneva',
+    'location' => 'Aadorferstrasse 5
+                    9546, Tuttwil, Thurgau 
+                    Switzerland',
     'email' => 'Email us',
     'call' => 'Call us',
     'form_sub_title' => 'Get In Touch',

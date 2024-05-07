@@ -9,7 +9,9 @@ return [
     'contact_us' => 'Contact Us',
     'get_in_touch' => 'Get In Touch',
     'office_address' => 'Office Address',
-    'office_location' => 'Swissra, <br> Geneva',
+    'office_location' => 'Aadorferstrasse 5<br>
+9546, Tuttwil,<br>, Thurgau <br>
+Switzerland',
     'phone_number' => 'Phone Number',
     'email_address' => 'Email Address',
     'main_pages' => 'Main Pages',
