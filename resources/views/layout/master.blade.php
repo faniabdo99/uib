@@ -94,11 +94,9 @@
                                         <ul class="navigation">
                                             <li @if(request()->route()->getName() == 'home') class="active" @endif><a href="{{ route('home') }}">@lang('navbar.home')</a></li>
                                             <li @if(request()->route()->getName() == 'about') class="active" @endif><a href="{{ route('about') }}">@lang('navbar.about_us')</a></li>
-                                        <li @if(request()->route()->getName() == 'services') class="active" @endif><a href="{{ route('services') }}" class="menu-item-has-children">@lang('navbar.services')</a>
-                
-                                            
+                                            <li @if(request()->route()->getName() == 'services') class="active" @endif><a href="{{ route('services') }}" class="menu-item-has-children">@lang('navbar.services')</a>
                                             <ul class="sub-menu">
-                                                @forelse(getFeaturedServices(6) as $FeaturedService)
+                                                @forelse(getFeaturedServices(10) as $FeaturedService)
                                                     <li>
                                                         <a href="{{ route('services.single', [$FeaturedService->id, $FeaturedService->slug]) }}"><i class="renova-right-arrow"></i><span>{{ $FeaturedService->title }}</span></a>
                                                     </li>
