@@ -32,14 +32,14 @@
                         <div class="project__details-info">
                             <h3 class="info-title">@lang('projects.projects_information')</h3>
                             <div class="project__info-item-wrap">
-                                @if($Project->client)
+                                @if($Project->clients)
                                     <div class="project__info-item">
                                         <div class="icon">
                                             <i class="fas fa-user"></i>
                                         </div>
                                         <div class="content">
                                             <span>@lang('projects.clients')</span>
-                                            <h4 class="title">{{ $Project->client }}</h4>
+                                            <h4 class="title">{{ $Project->clients }}</h4>
                                         </div>
                                     </div>
                                 @endif
