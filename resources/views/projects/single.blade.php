@@ -88,23 +88,24 @@
             @if($Project->Gallery)
                 <div class="project__details-img">
                     <div class="row">
-                        <div class="swiper fix blog-thumb-active">
-                            <div class="swiper-wrapper">
+                        <div class="blog__post-thumb-two">
+                        <div class="fix blog-thumb-active">
+                            <div class="owl-carousel owl-theme">
                                 @foreach($Project->Gallery as $Image)
                                     <div class="swiper-slide">
                                         <a href="#"><img src="{{ $Image->imagePath }}" alt="img"></a>
                                     </div>
                                 @endforeach
                             </div>
-                            <div class="blog__post-thumb-nav">
-                                <button class="blog-button-prev"><i class="renova-right-arrow"></i></button>
-                                <button class="blog-button-next"><i class="renova-right-arrow"></i></button>
-                            </div>
+                     
                         </div>
+                        
+                       </div>
                     </div>
                 </div>
             @endif
         </div>
+    
     </section>
     <!-- project-details-area-end -->
     <x-CTA />

@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fontello.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+   <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="{{ asset('assets/css/default-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/default.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
@@ -21,6 +24,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/tg-cursor.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     @if(app()->getLocale() == 'ar')
         <link rel="stylesheet" href="{{ asset('assets/css/mainAr.css') }}">
     @endif
@@ -336,6 +341,7 @@
     </footer>
     <!-- footer-area-end -->
     <!-- JS here -->
+
     <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
@@ -343,7 +349,7 @@
     <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.odometer.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.appear.js') }}"></script>
-    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{{ asset('assets/js/jquery.marquee.min.js') }}"></script>
     <script src="{{ asset('assets/js/tg-cursor.min.js') }}"></script>
     <script src="{{ asset('assets/js/ajax-form.js') }}"></script>
@@ -353,8 +359,27 @@
     <script src="{{ asset('assets/js/wow.min.js') }}"></script>
     <script src="{{ asset('assets/js/aos.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         SVGInject(document.querySelectorAll("img.injectable"));
+    </script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
     </script>
 </body>
 

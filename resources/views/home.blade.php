@@ -2,25 +2,9 @@
 @section('content')
 <!-- slider-area -->
 <section class="slider__area-two">
-    <div class="swiper slider-active-two">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide slider__bg-two" data-background="{{ asset('assets/img/slider/slider-1.jpg') }}">
-                <div class="container">
-                    <div class="row justify-content-end">
-                        <div class="col-xl-7 col-lg-7">
-                            <div class="slider__content-two">
-                                <span class="sub-title">@lang('home.hero_sec_slide_1_sub_title')</span>
-                                <h2 class="title">@lang('home.hero_sec_slide_1_title')</h2>
-                                <div class="slider__btn">
-                                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
-                                    <a href="{{ route('contact') }}" class="btn popup-video">@lang('home.contact_btn')</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__shape" data-background="{{ asset('assets/img/slider/slider_shape.png') }}"></div>
-            </div>
+    <div class="swiper">
+        <div class="swiper-wrapper swiper-landing-page">
+           
             <div class="swiper-slide slider__bg-two" data-background="{{ asset('assets/img/slider/slider-3.jpg') }}">
                 <div class="container">
                     <div class="row justify-content-end">
@@ -55,13 +39,30 @@
                 </div>
                 <div class="slider__shape" data-background="{{ asset('assets/img/slider/slider_shape.png') }}"></div>
             </div>
+             <div class="swiper-slide slider__bg-two" data-background="{{ asset('assets/img/slider/slider-1.jpg') }}">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="slider__content-two">
+                                <span class="sub-title">@lang('home.hero_sec_slide_1_sub_title')</span>
+                                <h2 class="title">@lang('home.hero_sec_slide_1_title')</h2>
+                                <div class="slider__btn">
+                                    <a href="{{ route('services') }}" class="btn btn-two">@lang('home.view_services_btn') <img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt=""  class="injectable"></a>
+                                    <a href="{{ route('contact') }}" class="btn popup-video">@lang('home.contact_btn')</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__shape" data-background="{{ asset('assets/img/slider/slider_shape.png') }}"></div>
+            </div>
 
 
         </div>
-        <div class="slider__nav">
-            <button class="slider-button-prev"><img src="{{ asset('assets/img/icons/long_left_arrow.svg') }}" alt="" class="injectable"></button>
-            <button class="slider-button-next"><img src="{{ asset('assets/img/icons/long_right_arrow.svg') }}" alt="" class="injectable"></button>
-        </div>
+       <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+       
     </div>
 </section>
 <!-- slider-area-end -->
@@ -110,7 +111,7 @@
                 </div>
             </div>
         </div>
-        <div class="swiper brand-active">
+        <div class="swiper brand-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="brand__item">
@@ -125,6 +126,16 @@
                 <div class="swiper-slide">
                     <div class="brand__item">
                         <img src="{{ asset('assets/img/brand/brand_img06.png') }}" alt="img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="brand__item">
+                        <img src="{{ asset('assets/img/brand/brand-7.jpg') }}" alt="img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="brand__item">
+                        <img src="{{ asset('assets/img/brand/brand-8.png') }}" alt="img">
                     </div>
                 </div>
                

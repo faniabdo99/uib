@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="breadcrumb__content">
+                        <div class="breadcrumb__content headline-breadcrumb">
                             <h2 class="title">@lang('about.about_title')</h2>
                             <nav class="breadcrumb">
                                 <span property="itemListElement" typeof="ListItem">

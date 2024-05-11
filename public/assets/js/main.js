@@ -122,13 +122,26 @@ $(".menu-close, .offCanvas__overly").on("click", function () {
 /*=============================================
 	=        Slider Active		      =
 =============================================*/
-var sliderSwiper = new Swiper('.slider-active', {
-    spaceBetween: 0,
-    effect: "fade",
-    loop: true,
-    autoplay: {
-        delay: 6000,
-    },
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
 });
 
 
@@ -136,11 +149,12 @@ var sliderSwiper = new Swiper('.slider-active', {
 	=        Slider Active Two	      =
 =============================================*/
 var sliderSwiper = new Swiper('.slider-active-two', {
+ 
     spaceBetween: 0,
     effect: "fade",
     loop: true,
     autoplay: {
-        delay: 6000,
+        delay: 1000,
     },
     // Navigation arrows
     navigation: {
@@ -217,31 +231,28 @@ var projectTwoSwiper = new Swiper('.project__active-two', {
 /*=============================================
 	=        Brand Active		      =
 =============================================*/
-var brandSwiper = new Swiper('.brand-active', {
-    // Optional parameters
-    slidesPerView: 5,
-    spaceBetween: 24,
-    loop: true,
-    breakpoints: {
-        '1500': {
-            slidesPerView: 5,
-        },
-        '1200': {
-            slidesPerView: 5,
-        },
-        '992': {
-            slidesPerView: 4,
-        },
-        '768': {
-            slidesPerView: 3,
-        },
-        '576': {
-            slidesPerView: 3,
-        },
-        '0': {
-            slidesPerView: 2,
-        },
-    },
+const swiper = new Swiper('.brand-swiper', {
+  // Optional parameters
+      slidesPerView: 3,
+
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
 });
 
 
