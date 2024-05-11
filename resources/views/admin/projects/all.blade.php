@@ -17,6 +17,7 @@
                                         <th>Title</th>
                                         <th>Created By</th>
                                         <th>Date</th>
+                                        <th>Added</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -26,6 +27,7 @@
                                             <td>{{ $Project->id }}</td>
                                             <td>{{ $Project->title }}</td>
                                             <td>{{ $Project->User->name }}</td>
+                                            <td>{{ $Project->date->format('Y-m-d h:i A') }}</td>											
                                             <td>{{ $Project->created_at->format('Y-m-d h:i A') }}</td>											
                                             <td>
                                                 <div class="d-flex">
