@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Date</label>
-                                    <input name="date" type="date" class="form-control" value="{{ $Project->date }}">
+                                    <input name="date" type="date" class="form-control" value="{{ $Project->date->format('Y-m-d') }}">
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Address</label>
