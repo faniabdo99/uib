@@ -231,9 +231,9 @@ var projectTwoSwiper = new Swiper('.project__active-two', {
 /*=============================================
 	=        Brand Active		      =
 =============================================*/
-const swiper = new Swiper('.brand-swiper', {
+const swiper4 = new Swiper('.brand-swiper', {
   // Optional parameters
-      slidesPerView: 3,
+      slidesPerView: 4,
 
   direction: 'horizontal',
   loop: true,
