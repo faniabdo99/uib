@@ -53,7 +53,10 @@
                                 </div>
                                 <div class="content">
                                     <span>@lang('contact.email')</span>
-                                    <h2 class="title"><a href="mailto:info@uibswiss.ch">info@uibswiss.ch</a></h2>
+                                    <h2 class="title">
+                                        <a href="mailto:info@uibswiss.ch">info@uibswiss.ch</a><br>
+                                        <a href="mailto:w.allamy@uibswiss.ch">w.allamy@uibswiss.ch</a>
+                                </h2>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +70,10 @@
                                 </div>
                                 <div class="content">
                                     <span>@lang('contact.call')</span>
-                                    <h2 class="title"><a href="tel:0041789504555">+41789504555</a></h2>
+                                    <h2 class="title">
+                                        <a href="tel:0041789504555">+41 78 950 4555</a><br>
+                                        <a href="tel:+86 15 510 182717">+86 15 510 182717</a>
+                                </h2>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +82,7 @@
                 <div class="col-lg-8">
                     <!-- contact-map -->
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2696.3960861991773!2d8.942548784373768!3d47.482196779176626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDfCsDI4JzU1LjkiTiA4wrA1NicyNS4zIkU!5e0!3m2!1sar!2siq!4v1715031929144!5m2!1sar!2siq" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2696.396208312867!2d8.940361099999999!3d47.4821944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDfCsDI4JzU1LjkiTiA4wrA1NicyNS4zIkU!5e0!3m2!1sen!2siq!4v1715776535636!5m2!1sen!2siq" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <!-- contact-map-end -->
                     <div class="contact__form-wrap">

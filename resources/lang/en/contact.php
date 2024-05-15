@@ -5,7 +5,7 @@ return [
     'home' => 'Home',
     'location_title' => 'Location',
     'location' => 'Aadorferstrasse 5
-                    9546, Tuttwil, Thurgau 
+                    9546, Tuttwil, Thurgau, 
                     Switzerland',
     'email' => 'Email us',
     'call' => 'Call us',

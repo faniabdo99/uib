@@ -220,13 +220,13 @@
                     </div>
                     <div class="contact-list mb-30">
                         <h4>@lang('navbar.phone_number')</h4>
-                        <p>+41 78 950 45 55</p>
-                        <p>+41 78 950 45 55</p>
+                        <a href="tel:+41 78 950 45 55">+41 78 950 45 55</a><br>
+                        <a href="tel:+86 15 510 182717">+86 15 510 182717</a>
                     </div>
                     <div class="contact-list mb-30">
                         <h4>@lang('navbar.email_address')</h4>
-                        <p>info@uibswiss.ch</p>
-                        <p>Wissam@uibswiss.ch</p>
+                        <a href="mailto:info@uibswiss.ch">info@uibswiss.ch</a><br>
+                        <a href="mailto:w.allamy@uibswiss.ch">w.allamy@uibswiss.ch</a>
                     </div>
                 </div>
                 <div class="offCanvas__social-icon mt-30">
