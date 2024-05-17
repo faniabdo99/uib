@@ -12,5 +12,8 @@ return [
     'office_location' => 'ادورف ستراسه5,<br>9546,توفييل,تورگاو<br> 
 سويسرا',
     'phone_number' => 'رقم الهاتف',
+    'switzerland' => 'سويسرا',
+    'china' => 'الصين',
+    'iraq' => 'العراق',
     'email_address' => 'البريد الالكتروني'
 ];

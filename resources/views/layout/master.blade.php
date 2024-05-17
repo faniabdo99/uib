@@ -221,8 +221,9 @@
                     </div>
                     <div class="contact-list mb-30">
                         <h4>@lang('navbar.phone_number')</h4>
-                        <a href="tel:+41 78 950 45 55">+41 78 950 45 55</a><br>
-                        <a href="tel:+86 15 510 182717">+86 15 510 182717</a>
+                        <a href="tel:+41 78 950 45 55">@lang('navbar.switzerland') +41 78 950 45 55</a><br>
+                        <a href="tel:+86 15 510 182717">@lang('navbar.china') +86 15 510 182717</a>
+                        <a href="tel:+964 770 429 7588">@lang('navbar.iraq') +964 770 429 7588</a>
                     </div>
                     <div class="contact-list mb-30">
                         <h4>@lang('navbar.email_address')</h4>

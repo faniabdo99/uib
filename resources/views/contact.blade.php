@@ -71,8 +71,11 @@
                                 <div class="content">
                                     <span>@lang('contact.call')</span>
                                     <h2 class="title">
-                                        <a href="tel:0041789504555">+41 78 950 4555</a><br>
-                                        <a href="tel:+86 15 510 182717">+86 15 510 182717</a>
+                                    <a href="tel:+41 78 950 45 55">@lang('navbar.switzerland') +41 78 950 45 55</a><br>
+                        <a href="tel:+86 15 510 182717">@lang('navbar.china') +86 15 510 182717</a>
+                        <a href="tel:+964 770 429 7588">@lang('navbar.iraq') +964 770 429 7588</a>
+
+                                        
                                 </h2>
                                 </div>
                             </div>

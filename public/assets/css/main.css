@@ -12024,6 +12024,9 @@ textarea {
 /*=============================
         26. Brand
 ===============================*/
+.brand-swiper .swiper-slide{
+  display: flex;
+}
 .brand__item {
   max-width: 150px;
   min-height: 20px;
