@@ -56,13 +56,9 @@
                 </div>
                 <div class="slider__shape" data-background="{{ asset('assets/img/slider/slider_shape.png') }}"></div>
             </div>
-
-
         </div>
-       <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            
-       
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
 </section>
 <!-- slider-area-end -->
@@ -113,36 +109,18 @@
         </div>
          <div class="row">
         <div class="brand-swiper">
-             
              <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <div class="brand__item">
-                        <img class="small-logo" src="{{ asset('assets/img/brand/brand_img04.png') }}" alt="img">
+                @forelse(getGallery() as $Slide)
+                    <div class="swiper-slide">
+                        <div class="brand__item">
+                            <a href="{{ $Slide->url }}" target="_blank">
+                                <img class="small-logo" src="{{ $Slide->imagePath }}" alt="img">
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand__item">
-                        <img class="small-logo" src="{{ asset('assets/img/brand/brand_img05.png') }}" alt="img">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand__item">
-                        <img src="{{ asset('assets/img/brand/brand_img06.png') }}" alt="img">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand__item">
-                        <img src="{{ asset('assets/img/brand/brand-7.jpg') }}" alt="img">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand__item">
-                        <img src="{{ asset('assets/img/brand/brand-8.png') }}" alt="img">
-                    </div>
-                </div>
+                @empty
+                @endforelse
             </div>
-      
        </div>
     </div>
 </section>

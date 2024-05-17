@@ -113,6 +113,16 @@
                     <li>
 						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-television"></i>
+							<span class="nav-text">Gallery</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('admin.gallery.all') }}">All Slides</a></li>
+                            <li><a href="{{ route('admin.gallery.getNew') }}">Add New</a></li>
+                        </ul>
+                    </li>
+                    <li>
+						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-television"></i>
 							<span class="nav-text">Blog</span>
 						</a>
                         <ul aria-expanded="false">
@@ -164,6 +174,20 @@
 		<!--**********************************
             Content body start
         ***********************************-->
+        @if($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         @yield('content')
         <!--**********************************
             Content body end
@@ -174,7 +198,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2021</p>
+                <p>Copyright © Designed &amp; Developed by <a href="https://productions.naqrah.net/" target="_blank">Naqrah Productions</a> 2024</p>
             </div>
         </div>
         <!--**********************************

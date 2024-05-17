@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactRequestController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProjectController;
@@ -81,6 +82,15 @@ Route::group(['prefix' => 'dashboard', 'middleware' => [isAdmin::class], 'as' =>
         Route::get('edit/{Blog}', [BlogController::class, 'getAdminEdit'])->name('blogs.getEdit');
         Route::post('edit/{Blog}', [BlogController::class, 'postAdminEdit'])->name('blogs.postEdit');
         Route::get('delete/{Blog}', [BlogController::class, 'delete'])->name('blogs.delete');
+    });
+
+    Route::prefix('gallery')->group(function(){
+        Route::get('all' , [GalleryController::class, 'getAdminAll'])->name('gallery.all');
+        Route::get('manage', [GalleryController::class, 'getAdminNew'])->name('gallery.getNew');
+        Route::post('new', [GalleryController::class, 'postAdminNew'])->name('gallery.postNew');
+        Route::get('edit/{Gallery}', [GalleryController::class, 'getAdminEdit'])->name('gallery.getEdit');
+        Route::post('edit/{Gallery}', [GalleryController::class, 'postAdminEdit'])->name('gallery.postEdit');
+        Route::get('delete/{Gallery}', [GalleryController::class, 'delete'])->name('gallery.delete');
     });
 });
 Route::post('api/upload/{project}', [ProjectController::class, 'uploadGallery'])->name('admin.projects.uploadGallery');
