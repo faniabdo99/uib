@@ -7,9 +7,9 @@
                 <div class="cta__content">
                     <h2 class="title">@lang('cta.cta_title')</h2>
                     <div class="cta__btn">
-                        <a href="contact.html" class="btn btn-two">@lang('cta.cta_btn_1') <img
+                        <a href="{{ route('contact') }}" class="btn btn-two">@lang('cta.cta_btn_1') <img
                                 src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
-                        <a href="contact.html" class="btn transparent-btn">@lang('cta.cta_btn_2') <img
+                        <a href="{{ route('contact') }}" class="btn transparent-btn">@lang('cta.cta_btn_2') <img
                                 src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
                     </div>
                 </div>

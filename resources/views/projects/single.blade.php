@@ -89,7 +89,7 @@
                 <div class="project__details-img">
                     <div class="row">
                         <div class="blog__post-thumb-two">
-                        <div class="fix blog-thumb-active">
+                        <div class="fix">
                             <div class="owl-carousel owl-theme">
                                 @foreach($Project->Gallery as $Image)
                                     <div class="swiper-slide">

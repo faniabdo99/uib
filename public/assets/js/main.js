@@ -179,7 +179,7 @@ var sliderSwiper = new Swiper('.slider-active-three', {
 /*=============================================
 	=        Project Active		      =
 =============================================*/
-var projectSwiper = new Swiper('.project-active', {
+var Swiper5 = new Swiper('.project-active', {
     // Optional parameters
     slidesPerView: 2,
     spaceBetween: 24,
@@ -231,13 +231,32 @@ var projectTwoSwiper = new Swiper('.project__active-two', {
 /*=============================================
 	=        Brand Active		      =
 =============================================*/
-const swiper4 = new Swiper('.brand-swiper', {
+var swiper4 = new Swiper('.brand-swiper', {
   // Optional parameters
-      slidesPerView: 4,
+      slidesPerView: 5,
 
   direction: 'horizontal',
   loop: true,
-
+ breakpoints: {
+        '1500': {
+            slidesPerView: 5,
+        },
+        '1200': {
+            slidesPerView: 5,
+        },
+        '992': {
+            slidesPerView: 5,
+        },
+        '768': {
+            slidesPerView: 2,
+        },
+        '576': {
+            slidesPerView: 1,
+        },
+        '0': {
+            slidesPerView: 1,
+        },
+    },
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',

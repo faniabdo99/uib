@@ -7,7 +7,7 @@ return [
     'hero_sec_slide_3_sub_title' => 'We\'re Working Since 2016 in the this Field',
     'hero_sec_slide_3_title' => 'Your Partner <br>In Switzerland',
     'about_area_sub_title' => 'Let’s work together',
-    'about_area_title' => 'Untitled International Business GMBH FOUNDED IN SWITZERLAND, TG IN 2016',
+    'about_area_title' => 'United International Business GMBH FOUNDED IN SWITZERLAND, TG IN 2016',
     'about_area_text' => 'our company was founded on the idea of helping those doing business between China, Middle East, and EU. Since our company was established, we have endeavored to provide your company with the services necessary for your business to succeed internationally. We advise and support global companies that are leaders in their industries.
     In UIB SWISS GmbH we counsel our clients on their key strategic issues, leveraging our deep industry expertise and using analytical rigor to help them make informed decisions more quickly and solve their toughest and most critical business problems.',
     'about_area_cta_title' => 'Know Us More',

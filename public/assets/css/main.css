@@ -7438,6 +7438,9 @@ textarea {
      align-items: normal !important;
     justify-content: normal !important;
  }
+  .project-active {
+      overflow: hidden;
+  }
  .project-active .swiper-wrapper {
     justify-content: normal;
  }

@@ -92,7 +92,7 @@
                         <div class="about__customer-box">
                             <h4 class="title">@lang('home.about_area_cta_title')</h4>
                         </div>
-                        <a href="about.html" class="btn btn-two">@lang('home.learn_more_btn')<img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
+                        <a href="{{ route('about') }}" class="btn btn-two">@lang('home.learn_more_btn')<img src="{{ asset('assets/img/icons/right_arrow.svg') }}" alt="" class="injectable"></a>
                     </div>
                 </div>
             </div>
@@ -111,36 +111,39 @@
                 </div>
             </div>
         </div>
-        <div class="owl-carousel owl-theme">
-            
-                <div class="item">
+         <div class="row">
+        <div class="brand-swiper">
+             
+             <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
                     <div class="brand__item">
                         <img class="small-logo" src="{{ asset('assets/img/brand/brand_img04.png') }}" alt="img">
                     </div>
                 </div>
-                <div class="item">
+                <div class="swiper-slide">
                     <div class="brand__item">
                         <img class="small-logo" src="{{ asset('assets/img/brand/brand_img05.png') }}" alt="img">
                     </div>
                 </div>
-                <div class="item">
+                <div class="swiper-slide">
                     <div class="brand__item">
                         <img src="{{ asset('assets/img/brand/brand_img06.png') }}" alt="img">
                     </div>
                 </div>
-                <div class="item">
+                <div class="swiper-slide">
                     <div class="brand__item">
                         <img src="{{ asset('assets/img/brand/brand-7.jpg') }}" alt="img">
                     </div>
                 </div>
-                <div class="item">
+                <div class="swiper-slide">
                     <div class="brand__item">
                         <img src="{{ asset('assets/img/brand/brand-8.png') }}" alt="img">
                     </div>
                 </div>
-               
-         
-        </div>
+            </div>
+      
+       </div>
     </div>
 </section>
 <!-- brand-area-end -->
@@ -233,11 +236,13 @@
                 </div>
             </div>
         </div>
-        <div class="swiper project-active">
-            <div class="swiper-wrapper">
+        <div class="project-active">
+        <div class="swiper-wrapper">
                 @forelse ($FeaturedProjects as $Project)
-                <div class="swiper-slide">
-                    <div class="project__item">
+                             
+
+         
+                    <div class="project__item swiper-slide">
                         <div class="project__thumb">
                             <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><img src="{{ $Project->imagePath }}" alt="{{ $Project->title }}"></a>
                         </div>
@@ -249,27 +254,12 @@
                             <div class="project__icon">
                                 <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><i class="fas fa-plus"></i></a>
                             </div>
+                 
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project__item">
-                        <div class="project__thumb">
-                            <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><img src="{{ $Project->imagePath }}" alt="{{ $Project->title }}"></a>
-                        </div>
-                        <div class="project__content">
-                            <div class="content">
-                                <h2 class="title"><a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}">{{ $Project->title }}</a></h2>
-                                <span>{{ $Project->date }}</span>
-                            </div>
-                            <div class="project__icon">
-                                <a href="{{ route('projects.single', [$Project->id, $Project->slug]) }}"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 @empty
                 @endforelse
+            </div>
             </div>
         </div>
     </div>

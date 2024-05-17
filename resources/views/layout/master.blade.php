@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fontello.css') }}">
-   <link
+    
+<link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
@@ -349,7 +350,7 @@
     <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.odometer.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.appear.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{{ asset('assets/js/jquery.marquee.min.js') }}"></script>
     <script src="{{ asset('assets/js/tg-cursor.min.js') }}"></script>
     <script src="{{ asset('assets/js/ajax-form.js') }}"></script>
@@ -364,23 +365,34 @@
         SVGInject(document.querySelectorAll("img.injectable"));
     </script>
     <script>
+    
         $('.owl-carousel').owlCarousel({
+            slidesby:2,
+    items:2,
     loop:true,
     margin:10,
     nav:true,
-    responsive:{
+    responsiveClass:true,
+     responsive:{
         0:{
-            items:1
+            items:1,
+            nav:true
         },
         600:{
-            items:3
+            items:2,
+            nav:false
         },
         1000:{
-            items:5
+            items:2,
+            nav:true,
+            loop:false
         }
-    }
-})
-    </script>
+     }
+    
+});
+  </script>
+  
+   
 </body>
 
 </html>
